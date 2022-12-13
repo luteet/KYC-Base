@@ -1,0 +1,180 @@
+html, body {
+    font-size: 16px;
+    min-height: 100%;
+}
+
+body {
+
+    font-family: var(--main-font);
+    
+    font-weight: 400;
+    line-height: 150%;
+
+    display: flex;
+    flex-direction: column;
+    
+
+    &._active {
+        overflow: hidden;
+        & .wrapper {
+            margin-right: var(--width-scrollbar);
+        }
+        //padding-right: var(--width-scrollbar);
+
+        & .header {
+            //padding-right: var(--width-scrollbar);
+        }
+    }
+
+    &._popup-active {
+        overflow: hidden;
+    }
+    
+}
+
+.offset-check-js {
+    position: fixed;
+    left: 0; top: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    padding-bottom: 50px;
+
+    flex: 1 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%; top: 0;
+        transform: translate(-50%,0);
+        width: min(1900px, 100%); height: 100%;
+        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1801 1875' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='0.5' y1='2.18557e-08' x2='0.499886' y2='2617' stroke='%23EBEBEB'/%3E%3Cline x1='1800.5' y1='2.18557e-08' x2='1800.5' y2='1721.74' stroke='%23EBEBEB'/%3E%3Cline x1='910.5' y1='2.18557e-08' x2='910.5' y2='2617' stroke='%23EBEBEB'/%3E%3Cline x1='455.5' y1='2.18557e-08' x2='455.5' y2='2617' stroke='%23EBEBEB'/%3E%3Cline x1='1365.5' y1='2.18557e-08' x2='1365.5' y2='2617' stroke='%23EBEBEB'/%3E%3C/svg%3E%0A")
+        9px 0 / 98.8% repeat;
+        @media (min-width: 1440px) {
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1801 1875' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='0.5' y1='2.18557e-08' x2='0.499886' y2='2617' stroke='%23EBEBEB'/%3E%3Cline x1='1800.5' y1='2.18557e-08' x2='1800.5' y2='1721.74' stroke='%23EBEBEB'/%3E%3Cline x1='910.5' y1='2.18557e-08' x2='910.5' y2='2617' stroke='%23EBEBEB'/%3E%3Cline x1='455.5' y1='2.18557e-08' x2='455.5' y2='2617' stroke='%23EBEBEB'/%3E%3Cline x1='1365.5' y1='2.18557e-08' x2='1365.5' y2='2617' stroke='%23EBEBEB'/%3E%3C/svg%3E%0A")
+            54px 0 / 94.5% repeat;
+        }
+        z-index: -1;
+    }
+}
+
+.main {
+    overflow: hidden;
+
+    flex: 1 0 auto;
+}
+
+.container {
+    padding: 0 15px;
+    @media (min-width: 1440px) {
+        padding: 0 var(--container-padding);
+    }
+    margin: 0 auto;
+    max-width: #{$container}px;
+    &._min {
+        max-width: #{$containerMin}px;
+    }
+    &._large {
+        max-width: #{$containerLarge}px;
+    }
+}
+
+.decor-text {
+    position: absolute;
+    left: 15px; bottom: 100px;
+    z-index: -1;
+    font-weight: 900;
+    font-size: 5rem;
+    @media (min-width: 450px) {
+        font-size: 7rem;
+    }
+    @include _768 {
+        font-size: 12vw;
+        white-space: nowrap;
+    }
+    @media (min-width: 1440px) {
+        bottom: 50px;
+        left: 60px;
+        font-size: 11.25rem;
+    }
+    line-height: 83%;
+    
+
+    text-transform: uppercase;
+
+    color: #F5F5F5;
+}
+
+.relative {
+    position: relative;
+}
+
+.section-padding {
+    padding: 75px 0px;
+
+    @include _768 {
+        padding: 100px 0px;
+    }
+
+    @include _992 {
+        padding: 150px 0px;
+    }
+
+}
+
+.bg-img {
+    position: absolute;
+    left: 0; top: 0;
+    
+    width: 100%; height: 100%;
+
+    user-select: none;
+    object-fit: cover;
+
+    z-index: -1;
+}
+
+.btn {
+    display: inline-block;
+    
+    padding: 7px 15px;
+
+    background: var(--accent);
+    color: var(--white);
+
+    border-radius: 5px;
+
+    transition: color .2s ease-in-out, background .2s ease-in-out;
+}
+
+section {
+    &:not(:first-child) {
+        padding: 20px 0;
+
+        @include _768 {
+            padding: 35px 0;
+        }
+        
+        @include _992 {
+            padding: 56px 0;
+        }
+    }
+    &:first-child {
+        padding-bottom: 20px;
+
+        @include _768 {
+            padding-bottom: 40px;
+        }
+        
+        @include _992 {
+            padding-bottom: 56px;
+        }
+    }
+}

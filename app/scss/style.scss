@@ -1,0 +1,17 @@
+@import 'mixin';
+@import 'null';
+@import 'libs';
+@import 'vars';
+@import 'global';
+@import 'font';
+
+@import 'main-sections/header';
+
+
+@import 'pages/main-page/database';
+@import 'pages/main-page/tag-cloud';
+@import 'pages/main-page/statistics';
+@import 'pages/main-page/why-we-work';
+
+
+@import 'main-sections/footer';

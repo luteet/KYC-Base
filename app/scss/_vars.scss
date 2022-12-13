@@ -1,0 +1,49 @@
+
+
+$containerPadding: 60;
+
+$container: 1780 + ($containerPadding * 2);
+$containerMin: 1280 + ($containerPadding * 2);
+$containerLarge: 1560 + ($containerPadding * 2);
+
+:root {
+    --title-font: 'Uni Sans';
+    --main-font: 'Roboto';
+    
+    --dark: #252525;
+    --dark-2: #313131;
+    --light: #F8F8F8;
+
+    --white: #FFF;
+    --black: #000;
+    --gray: #666666;
+    --light-gray: #ABABAB;
+    --dark-green: #2F554B;
+
+
+    --container-padding: 60px;
+}
+
+@font-face {
+    @include font-include('Roboto', 300, swap, normal, 'Roboto-Light');
+}
+
+@font-face {
+    @include font-include('Roboto', 400, swap, normal, 'Roboto-Regular');
+}
+
+@font-face {
+    @include font-include('Roboto', 500, swap, normal, 'Roboto-Medium');
+}
+
+@font-face {
+    @include font-include('Roboto', 700, swap, normal, 'Roboto-Bold');
+}
+
+@font-face {
+    @include font-include('Roboto', 900, swap, normal, 'Roboto-Black');
+}
+
+@font-face {
+    @include font-include('Uni Sans', 900, swap, normal, 'UniSansHeavy');
+}

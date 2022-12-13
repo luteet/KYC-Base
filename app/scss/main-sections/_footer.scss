@@ -1,0 +1,40 @@
+.footer {
+    flex: 0 0 auto;
+    background: #ccc;
+    
+    // .footer__container
+
+    &__container {
+    }
+
+    // .footer__logo
+
+    &__logo {
+
+        // .footer__logo--img
+
+        &--img {
+        }
+    }
+
+    // .footer__nav
+
+    &__nav {
+
+        // .footer__nav--list
+
+        &--list {
+        }
+
+        // .footer__nav--item
+
+        &--item {
+        }
+
+        // .footer__nav--link
+
+        &--link {
+        }
+    }
+}
+

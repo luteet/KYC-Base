@@ -1,0 +1,117 @@
+.why-we-work {
+
+    // .why-we-work__container
+
+    &__container {
+    }
+
+    // .why-we-work__title
+
+    &__title {
+    }
+
+    // .why-we-work__list
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+
+        padding-top: 25px;
+
+        @include _768 {
+            padding-top: 50px;
+            margin: -15px;
+            //margin: 0 -43px;
+        }
+
+        @include _992 {
+            margin: -15px 0;
+        }
+        //flex-wrap: wrap;
+    }
+
+    // .why-we-work__item
+
+    &__item {
+
+        padding: 15px 0;
+        
+        @include _768 {
+            padding: 15px;
+            flex: 0 1 50%;
+        }
+
+        @include _992 {
+            padding: 15px 0;
+
+            &:nth-child(3n + 1) {
+                padding-right: 46px;
+            }
+    
+            &:nth-child(3n + 3) {
+                padding-left: 30px;
+                @media (min-width: 1440px) {
+                    padding-left: 119px;
+                }
+                flex: 0 1 30%;
+            }
+    
+            &:nth-child(3n + 2) {
+                flex: 0 1 45%;
+                padding-left: 12px;
+            }
+    
+            flex: 0 1 25%;
+        }
+
+        // .why-we-work__item--body
+
+        &--body {
+        }
+
+        // .why-we-work__item--title
+
+        &--title {
+            position: relative;
+
+            font-weight: 700;
+            line-height: 133%;
+            color: #252525;
+            font-size: 1.125rem;
+            &::before {
+                content: '';
+                position: absolute;
+                left: -15px; top: 15px;
+                width: 12px; height: 3px;
+                background: var(--dark-green);
+            }
+            @include _768 {
+                font-size: 1.25rem;
+                &::before {
+                    left: -15px; top: 15px;
+                }
+            }
+            
+            @include _992 {
+                font-size: 1.5rem;
+                &::before {
+                    left: -15px; top: 15px;
+                }
+            }
+            
+        }
+
+        // .why-we-work__item--text
+
+        &--text {
+            padding-top: 10px;
+            color: var(--gray);
+            font-size: 1rem;
+            @include _768 {
+                padding-top: 27px;
+                font-size: 1.125rem;
+            }
+            line-height: 156%;
+        }
+    }
+}

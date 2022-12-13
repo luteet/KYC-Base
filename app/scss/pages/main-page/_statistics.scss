@@ -1,0 +1,138 @@
+.statistics {
+
+    // .statistics__container
+
+    &__container {
+    }
+
+    // .statistics__title
+
+    &__title {
+    }
+
+    // .statistics__list
+
+    &__list {
+        padding-top: 25px;
+        @include _768 {
+            padding-top: 50px;
+        }
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin: -10px;
+
+        @media (min-width: 1440px) {
+            padding-right: 120px; padding-left: 10px;
+        }
+    }
+
+    // .statistics__card
+
+    &__card {
+        flex: 0 1 50%;
+
+        padding: 10px;
+        
+        @include _992 {
+            flex: 0 1 auto;
+            &:nth-child(even) {
+                padding-top: 25px;
+            }
+    
+            padding: 10px;
+        }
+
+        // .statistics__card--body
+
+        &--body {
+            padding: 15px 24px;
+
+            border: 1px solid #C9C9C9;
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+
+            min-height: 100%;
+            @include _992 {
+                min-height: auto;
+                min-width: 290px;
+
+                display: block;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 23px; top: -2.5px;
+                background: #313131;
+                width: 23px; height: 5px;
+            }
+        }
+
+        // .statistics__card--decor-title
+
+        &--decor-title {
+            font-weight: 800;
+            font-size: 1rem;
+            @include _768 {
+                font-size: 1.125rem;
+            }
+            
+            @include _992 {
+                font-size: 1.375rem;
+            }
+            line-height: 109%;
+
+            letter-spacing: 0.02em;
+
+            color: #EDEDED;
+            writing-mode: vertical-rl;
+            transform: scale(-1);
+
+            max-height: 115px;
+        }
+
+        // .statistics__card--value
+
+        &--value {
+            display: flex;
+            align-items: flex-end;
+            font-weight: 900;
+            font-size: 1.5rem;
+            line-height: 110%;
+            color: #000115;
+            letter-spacing: -0.03em;
+
+            flex: 1 1 auto;
+            padding-top: 16px;
+
+            @include _768 {
+                font-size: 2.5rem;
+                padding-top: 6px;
+            }
+            
+            @include _992 {
+                font-size: 3.125rem;
+                padding-top: 12px;
+            }
+        }
+
+        // .statistics__card--title
+
+        &--title {
+            padding-top: 10px;
+            font-size: 1rem;
+            line-height: 144%;
+            color: #242424;
+
+            @include _768 {
+                max-width: 160px;
+                font-size: 1.125rem;
+            }
+        }
+    }
+}

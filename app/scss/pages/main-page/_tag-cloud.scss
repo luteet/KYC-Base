@@ -1,0 +1,63 @@
+.tag-cloud {
+
+    // .tag-cloud__container
+
+    &__container {
+    }
+
+    // .tag-cloud__title
+
+    &__title {
+    }
+
+    // .tag-cloud__list
+
+    &__list {
+        padding-top: 25px;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        margin: -4px;
+
+        @include _768 {
+            padding-top: 50px;
+            margin: -8px;
+        }
+    }
+
+    // .tag-cloud__item
+
+    &__item {
+
+        padding: 8px;
+
+        font-size: 1rem;
+        line-height: 156%;
+
+        text-align: center;
+
+        color: #242424;
+
+        @include _768 {
+            font-size: 1.125rem;
+            padding: 8px;
+        }
+
+        // .tag-cloud__item--body
+
+        &--body {
+            padding: 10px 15px;
+            background: var(--light);
+            border-radius: 5px;
+
+            @include _768 {
+                padding: 13px 20px;
+            }
+            
+            @include _992 {
+                padding: 16px 25px;
+            }
+        }
+    }
+}
