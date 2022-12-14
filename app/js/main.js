@@ -50,10 +50,9 @@ let windowSize;
 function resize() {
 
   windowSize = window.innerWidth
-  html.style.setProperty('--width-scrollbar', window.innerWidth - body.offsetWidth + 'px');
   html.style.setProperty('--height-screen', window.innerHeight + 'px');
+  html.style.setProperty('--width-scrollbar', window.innerWidth - body.offsetWidth + 'px');
   
-
 }
 
 resize();

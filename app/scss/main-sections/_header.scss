@@ -13,19 +13,23 @@
 
     z-index: 99;
 
-    &__logo {
-        max-width: 105px;
-        @media (min-width: 360px) {
-            max-width: 165px;
-        }
-        z-index: 2;
-        &--img {
-            width: 100%;
-        }
-    }
+    
 
     &__container {
         
+    }
+
+    &__logo {
+        z-index: 2;
+        max-width: 105px;
+        
+        @media (min-width: 360px) {
+            max-width: 165px;
+        }
+        
+        &--img {
+            width: 100%;
+        }
     }
 
     // .header__row

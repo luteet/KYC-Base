@@ -423,8 +423,8 @@ section:first-child {
 }
 
 .header__logo {
-    max-width: 105px;
-    z-index: 2
+    z-index: 2;
+    max-width: 105px
 }
 
 .header__logo--img {
