@@ -423,7 +423,7 @@ section:first-child {
 }
 
 .header__logo {
-    max-width: 165px;
+    max-width: 105px;
     z-index: 2
 }
 
@@ -718,6 +718,7 @@ section:first-child {
     perspective: 400px;
     overflow: hidden;
     padding-right: 100px;
+    white-space: nowrap;
     font-weight: 900;
     font-size: 1.5rem;
     line-height: 188%;
@@ -1070,6 +1071,12 @@ section:first-child {
 .footer {
     flex: 0 0 auto;
     background: #ccc
+}
+
+@media (min-width:360px) {
+    .header__logo {
+        max-width: 165px
+    }
 }
 
 @media (min-width:450px) {
