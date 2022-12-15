@@ -1,0 +1,118 @@
+.articles {
+
+    // .articles__container
+
+    &__container {
+        max-width: 1990px;
+    }
+
+    // .articles__title
+
+    &__title {
+        
+        @media (min-width: 1940px) {
+            margin-left: 45px;
+        }
+    }
+
+    // .articles__list
+
+    &__list {
+        padding-top: 17px;
+        @media (min-width: 1940px) {
+            margin-left: 45px;
+        }
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    // .articles__item
+
+    &__item {
+
+        flex: 0 1 100%;
+
+        @include _768 {
+            flex: 0 1 50%;
+        }
+        
+        @include _992 {
+            flex: 0 1 33.333%;
+        }
+
+        @media (min-width: 1440px) {
+            flex: 0 1 25%;
+        }
+
+        padding: 15px 0;
+
+        // .articles__item--body
+
+        &--body {
+            //padding: 10px 25px 10px 25px;
+            @include _768 {
+                padding-right: 25px;
+            }
+            & h3 {
+                font-weight: 700;
+                font-size: 1.125rem;
+                @include _768 {
+                    font-size: 1.25rem;
+                }
+                
+                @include _992 {
+                    font-size: 1.5rem;
+                }
+                line-height: 133%;
+                color: #252525;
+
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: -7px; top: 15px;
+                    transform: translate(-100%,0);
+                    width: 12px; height: 3px;
+                    background: var(--dark-green);
+                }
+
+            }
+
+            & p {
+                padding-top: 13px;
+                
+                @include _992 {
+                    padding-top: 23px;
+                    font-size: 1.125rem;
+                }
+
+                font-size: 1rem;
+                line-height: 156%;
+                color: #666666;
+            }
+
+            & a {
+                display: inline-block;
+                margin-top: 12px;
+
+                @include _992 {
+                    font-size: 1.125rem;
+                }
+
+                font-weight: 600;
+                font-size: 1rem;
+                line-height: 156%;
+
+                text-decoration-line: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+                color: #252525;
+
+            }
+        }
+    }
+}

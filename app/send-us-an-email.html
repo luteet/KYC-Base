@@ -1,0 +1,43 @@
+@@include("html/_header-page-address-2.html", {
+    "link": 'Send us an email',
+})
+
+        <main class="main">
+            <section class="form-page">
+                <form action="#" class="form-page__container container">
+                    <div class="form-page__decor-text decor-text">Signup form</div>
+                    <h1 class="form-page__title main-title decor-line">
+                        Send us an email
+                    </h1>
+                    <div class="form-page__block">
+                        <label class="form-page__label">
+                            <span class="form-page__label--legend">About whom</span>
+                            <input type="text" name="about-whom" class="form-page__input input">
+                        </label>
+                        <label class="form-page__label">
+                            <span class="form-page__label--legend">E-mail</span>
+                            <input type="email" name="email" placeholder="Your e-mail" class="form-page__input input">
+                        </label>
+                        <label class="form-page__label">
+                            <span class="form-page__label--legend">Confirmation</span>
+                            <input type="text" name="confirmation" placeholder="http://" class="form-page__input input">
+                        </label>
+                        <label class="form-page__label">
+                            <span class="form-page__label--legend">Phone</span>
+                            <input type="tel" name="phone" placeholder="+7 (123) 456-765-56" class="form-page__input input">
+                        </label>
+                        <label class="form-page__label _large">
+                            <span class="form-page__label--legend">Information</span>
+                            <input type="text" name="message" placeholder="Message text" class="form-page__input input">
+                        </label>
+                        <div class="form-page__label">
+                            <button class="form-page__submit" type="submit">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+@@include("html/_footer.html")

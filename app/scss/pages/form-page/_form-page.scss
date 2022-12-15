@@ -1,0 +1,136 @@
+.form-page {
+
+    // .form-page__container
+
+    &__container {
+        position: relative;
+    }
+
+    // .form-page__decor-text
+
+    &__decor-text {
+        top: 25px !important; 
+
+        @media (min-width: 500px) {
+            top: 85px !important; 
+        }
+
+        bottom: auto !important;
+    }
+
+    // .form-page__title
+
+    &__title {
+    }
+
+    // .form-page__block
+
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+
+        margin: -10px;
+        padding-top: 24px;
+
+        @include _992 {
+            margin: -17.5px;
+            padding-top: 44px;
+        }
+        
+    }
+
+    // .form-page__label
+
+    &__label {
+
+        flex: 1 1 100%;
+
+        @media (min-width: 500px) {
+            flex: 0 1 50%;
+        }
+
+        @include _768 {
+            flex: 0 1 33.333%;
+        }
+        padding: 10px;
+        
+        @include _992 {
+            flex: 0 1 25%;
+            padding: 17.5px;
+        }
+
+        &._large {
+            flex: 1 1 auto;
+            @include _992 {
+                flex: 0 1 50%;
+            }
+        }
+
+        &._full {
+            flex: 1 1 100%;
+        }
+
+        // .form-page__label--legend
+
+        &--legend {
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 194%;
+            color: #212121;
+
+            @include _768 {
+                font-size: 1.125rem;
+            }
+        }
+    }
+
+    // .form-page__input
+
+    &__input {
+        margin-top: 3px;
+    }
+
+    // .form-page__submit
+
+    &__submit {
+        font-family: 'Uni Sans';
+        font-weight: 900;
+        font-size: 1.125rem;
+        line-height: 159%;
+
+        text-align: center;
+
+        color: #FFFFFF;
+        background: #212121;
+
+        transition: background .2s ease-in-out;
+        &:hover {
+            background: #3d3d3d;
+        }
+        
+        &:active {
+            background: #161616;
+        }
+
+        @media (min-width: 500px) {
+            min-width: 264px;
+        }
+
+        @include _768 {
+            font-size: 1.375rem;
+        }
+
+        min-width: 100%; min-height: 70px;
+    }
+
+    &__link {
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 194%;
+
+        text-decoration-line: underline;
+
+        color: #212121;
+    }
+}

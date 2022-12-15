@@ -4,6 +4,7 @@
 @import 'vars';
 @import 'global';
 @import 'font';
+@import 'form';
 
 @import 'main-sections/header';
 
@@ -12,6 +13,13 @@
 @import 'pages/main-page/tag-cloud';
 @import 'pages/main-page/statistics';
 @import 'pages/main-page/why-we-work';
+
+@import 'pages/countries/countries';
+
+@import 'pages/person/person';
+@import 'pages/person/articles';
+
+@import 'pages/form-page/form-page';
 
 
 @import 'main-sections/footer';
