@@ -18,7 +18,16 @@
                     <nav class="header__nav">
                         <div class="header__nav--body">
                             <div class="header__nav--decor-title">
-                                Menu
+                                 <!-- NEW -->
+                                 <div class="arrays">
+                                    <div class="sec"></div>
+                                    <div class="sec"></div>
+                                    <div class="sec"></div>
+                                    <div class="sec"></div>
+                                    <div class="sec"></div>
+                                </div>
+                                <span>Menu</span>
+                                <!-- NEW -->
                             </div>
                             <ul class="header__nav--list">
                                 <li class="header__nav--item" style="animation-delay: 0.5s;">
@@ -83,9 +92,105 @@
         <main class="main">
             <section class="database">
                 <div class="database__container container relative">
-                    <div class="database__decor-text decor-text">Complete database</div>
+                    <style>
+                        .arrays{
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                        }
+                        .decor-text{
+                            z-index: 0;
+                        }
+                        .database__text{
+                            width: fit-content;
+                        }
+                        .arrays .sec{
+                            width: 100%;
+                            height: 100%;
+                            opacity: 0;
+                            display: block;
+                            background: #fff;
+                        }
+                        .arrays .sec:hover{
+                            animation: hoverTextDecor 1s forwards;
+                        }
+                        @keyframes hoverTextDecor {
+                            from{
+                                opacity: 1;
+                            }
+                            to{
+                                opacity: 0;
+                            }
+                        }
+
+                        .database__form,
+                        .database__text,
+                        .database__title{
+                            z-index: 1;
+                            position: relative;
+                        }
+
+                        .decor-span span{
+                            transform: translateY(100px);
+                            display: block;
+                        }
+                        .decor-span{
+                            overflow: hidden;
+                            display: block;
+                        }
+                        .decor-span.decor-span_active span{
+                            transform: translateY(0);
+                            transition: all 1s ease-out;
+                        }
+
+                        .decor-letters span{
+                            display: block;
+                            margin-left: -120px;
+                            overflow: hidden;
+                            transition: all 1s ease-out;
+                            opacity: 0;
+                        }
+                        .decor-letters.decor-letters_active span{
+                            margin-left: 0;
+                            opacity: 1;
+                        }
+                        .decor-letters{
+                            display: flex;
+                        }
+                    </style>
+
+                    <div class="database__decor-text decor-text">
+                        <div class="arrays">
+                            <div class="sec"></div>
+                            <div class="sec"></div>
+                            <div class="sec"></div>
+                            <div class="sec"></div>
+                            <div class="sec"></div>
+                        </div>
+                        <span class="decor-letters">
+                            <span>C</span>
+                            <span>o</span>
+                            <span>m</span>
+                            <span>p</span>
+                            <span>l</span>
+                            <span>e</span>
+                            <span>t</span>
+                            <span>e</span>
+                            <span>&nbsp;</span>
+                            <span>d</span>
+                            <span>a</span>
+                            <span>t</span>
+                            <span>a</span>
+                            <span>b</span>
+                            <span>a</span>
+                            <span>s</span>
+                            <span>e</span>
+                        </span>
+                    </div>
                     <h1 class="database__title main-title decor-line">
-                        Full database of sanctioned, politically exposed persons and persons under special interest
+                        <span class="decor-span" data-decor-delay="0.0s"><span>Full database of sanctioned, politically</span></span> <span class="decor-span" data-decor-delay="0.2s"><span>exposed persons and persons under special</span></span> <span class="decor-span" data-decor-delay="0.4s"><span>interest</span></span>
                     </h1>
                     <div class="database__text">
                         Base of suspicious persons in Russia, Ukraine, Belarus, Kazakhstan here:

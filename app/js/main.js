@@ -538,6 +538,22 @@ let articlesSlider = new Swiper('.articles__slider--body', {
     } */
 });
 
+function delayAnimation(dataDelay, item) {
+  dataDelay = dataDelay.replace('s', '') * 1000;
+
+  setTimeout(() => {
+    item.classList.add('decor-span_active')
+  }, dataDelay)
+}
+
+document.querySelectorAll('.decor-span').forEach(item => {
+  let dataDelay = item.getAttribute('data-decor-delay')
+
+  if(dataDelay) delayAnimation(dataDelay, item)
+})
+
+document.querySelector('.decor-letters').classList.add('decor-letters_active')
+
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
