@@ -65,6 +65,7 @@ function scriptsLib() {
         //'node_modules/fslightbox/index.js', // Галерея
         //'node_modules/smoothscroll-polyfill/dist/smoothscroll.min.js', // Полифил для window.scroll()
         //'node_modules/chart.js/dist/chart.min.js', // График
+        'node_modules/scroll-lock/dist/scroll-lock.min.js', // Запрет скрола страницы
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
@@ -136,7 +137,7 @@ function stylesOriginal() {
 function stylesLib() {
     return src([
         'node_modules/normalize.css/normalize.css',
-        //'node_modules/swiper/swiper-bundle.min.css', // Слайдер
+        'node_modules/swiper/swiper-bundle.min.css', // Слайдер
         //'node_modules/slim-select/dist/slimselect.min.css', // Select
         //'node_modules/slick-carousel/slick/slick.css', // Слайдер (jQuery)
         //'node_modules/magnific-popup/dist/magnific-popup.css' // Попап (jQuery)
@@ -247,4 +248,4 @@ exports.fonts = series(ttf2woffConvert, ttf2woff2Convert, fonts);
 exports.folder = series(delFolder, createFolder);
 exports.zip = series(createFolder, createZip, zipDel);
 exports.webp = series(images, convertToWebp)
-exports.default = parallel(stylesLib, styles, watching, /* scriptsLib, */ scriptsMin, scripts, htmlCompilation, json, browsersync);
+exports.default = parallel(stylesLib, styles, watching, scriptsLib, scriptsMin, scripts, htmlCompilation, json, browsersync);

@@ -13,7 +13,7 @@
     color: #787878;
 
     @include _768 {
-        padding: 25px 50px 25px 24px;
+        padding: 22px 50px 22px 24px;
         font-size: 1.125rem;
     }
 
@@ -66,4 +66,69 @@
         }
     }
 
+}
+
+.checkbox {
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    cursor: pointer;
+
+    // .checkbox__input
+
+    &__input {
+        position: absolute;
+        left: 26.5px; top: 26.5px;
+        @include _768 {
+            left: 35px; top: 35px;
+        }
+        transform: translate(-50%,-50%);
+        opacity: 0; visibility: hidden;
+    }
+
+    &__input:checked + &__element::before {
+        opacity: 1; visibility: visible;
+    }
+
+    // .checkbox__element
+
+    &__element {
+        display: block;
+        position: relative;
+        width: 53px; height: 53px;
+        @include _768 {
+            width: 70px; height: 70px;
+        }
+
+        background: #F0F0F0;
+        border: 1px solid #C9C9C9;
+        border-radius: 8px;
+
+        margin-right: 17px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 22 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M21.2649 0.379414C21.7917 0.893908 21.8017 1.73807 21.2873 2.26489L8.26637 15.5983C8.004 15.8669 7.64051 16.0124 7.26521 15.9992C6.88993 15.9859 6.53765 15.8149 6.29496 15.5284L0.649134 8.86174C0.173228 8.29974 0.242987 7.4584 0.804934 6.98254C1.36687 6.50667 2.2082 6.5764 2.68411 7.13827L7.38264 12.6864L19.3794 0.401774C19.8938 -0.125066 20.7381 -0.135079 21.2649 0.379414Z' fill='black'/%3E%3C/svg%3E%0A")
+            center / 35% no-repeat;
+
+            transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+            opacity: 0; visibility: hidden;
+            pointer-events: none;
+        }
+    }
+
+    // .checkbox__text
+
+    &__text {
+        font-size: 1.125rem;
+        line-height: 133%;
+
+        color: #535353;
+    }
 }

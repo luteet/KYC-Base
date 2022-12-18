@@ -3,15 +3,99 @@
     // .articles__container
 
     &__container {
-        max-width: 1990px;
     }
 
     // .articles__title
 
     &__title {
-        
-        @media (min-width: 1940px) {
-            margin-left: 45px;
+    }
+
+    // .articles__slider
+
+    &__slider {
+
+        position: relative;
+        padding-right: 50px;
+        margin-top: 25px; margin-bottom: 35px;
+        @include _992 {
+            padding-right: 175px;
+            margin-top: 33px; margin-bottom: 52px;
+        }
+
+        //padding-right: 50px;
+        //width: calc(100% - 50px);
+
+        // .articles__slider--list
+
+        &--list {
+        }
+
+        // .articles__slider--slide
+
+        &--slide {
+        }
+
+        // .articles__slider--arrow
+
+        &--arrow {
+            transition: opacity .2s ease-in-out, background .2s ease-in-out;
+            &.swiper-button-disabled {
+                opacity: 0;
+            }
+            &.swiper-button-prev {
+                left: 0;
+            }
+            &.swiper-button-next {
+                right: 0;
+            }
+            margin-top: 0;
+            transform: translate(0,-50%);
+
+            background:#252525;
+            &:hover {
+                background:#3f3f3f;
+            }
+            
+            &:active {
+                background:#111111;
+            }
+
+            width: 35px; height: 35px;
+            @include _992 {
+                width: 50px; height: 50px;
+            }
+            &::after {
+                color: var(--white);
+                font-size: 16px;
+                font-weight: 900;
+            }
+        }
+    }
+
+    // .articles__tag
+
+    &__tag {
+        display: inline-block;
+        font-size: 0.875rem;
+        @include _992 {
+            font-size: 1.125rem;
+        }
+        line-height: 156%;
+        width: auto;
+
+        text-align: center;
+
+        color: #242424;
+        & a {
+            color: #242424;
+            display: block;
+            padding: 10px;
+            @include _992 {
+                padding: 13px 18px;
+            }
+
+            background: #F8F8F8;
+            border-radius: 5px;
         }
     }
 
@@ -19,12 +103,15 @@
 
     &__list {
         padding-top: 17px;
-        @media (min-width: 1940px) {
-            margin-left: 45px;
-        }
+        padding-right: 5px;
 
         display: flex;
         flex-wrap: wrap;
+
+        margin: -15px;
+        @include _768 {
+            margin: -15px -25px;
+        }
     }
 
     // .articles__item
@@ -45,7 +132,7 @@
             flex: 0 1 25%;
         }
 
-        padding: 15px 0;
+        padding: 15px;
 
         // .articles__item--body
 
@@ -53,6 +140,7 @@
             //padding: 10px 25px 10px 25px;
             @include _768 {
                 padding-right: 25px;
+                padding-left: 10px;
             }
             & h3 {
                 font-weight: 700;

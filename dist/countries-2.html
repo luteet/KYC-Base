@@ -60,7 +60,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="header__row">
+                <div class="header__row _rev">
                     <div class="header__lang">
                         <ul class="header__lang--list">
                             <li class="header__lang--item">
@@ -75,258 +75,514 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="header__page-address">
+                        <ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a>Countries</a>
+                            </li>
+                            <li>
+                                <a>All countries</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </header>
     
 
         <main class="main">
-            <section class="database">
-                <div class="database__container container relative">
-                    <div class="database__decor-text decor-text">Complete database</div>
-                    <h1 class="database__title main-title decor-line">
-                        Full database of sanctioned, politically exposed persons and persons under special interest
-                    </h1>
-                    <div class="database__text">
-                        Base of suspicious persons in Russia, Ukraine, Belarus, Kazakhstan here:
-                    </div>
-                    <form action="#" class="database__form">
-                        <label class="database__label">
-                            <input type="text" name="key" placeholder="Enter the name of the person or company" required class="database__input">
-                        </label>
-                        <button class="database__btn" type="submit">
-                            Verify
-                        </button>
+            <section class="search">
+                <div class="search__container container">
+                    <form action="#" class="search__form">
+                        <div class="search__decor-text decor-text">Search by country</div>
+                        <h1 class="search__title main-title decor-line">
+                            Search by country
+                        </h1>
+                        <div class="search__form--row">
+                            <div class="search__form--item">
+                                <div class="search__form--select-wrapper select-wrapper">
+                                    <select name="country" class="search__form--select select">
+                                        <option disabled selected>Select country</option>
+                                        <option value="country-1">Lorem ipsum dolor sit</option>
+                                        <option value="country-2">Lorem ipsum dolor sit</option>
+                                        <option value="country-3">Lorem ipsum dolor sit</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="search__form--item">
+                                <label class="search__form--checkbox checkbox">
+                                    <input type="checkbox" name="search-in-section" class="checkbox__input">
+                                    <span class="checkbox__element"></span>
+                                    <span class="checkbox__text">Search in section</span>
+                                </label>
+                            </div>
+                            <div class="search__form--item">
+                                <div class="search__form--select-wrapper select-wrapper">
+                                    <select name="connection" class="search__form--select select">
+                                        <option disabled selected>Choose a connection</option>
+                                        <option value="connection-1">Lorem ipsum dolor sit</option>
+                                        <option value="connection-2">Lorem ipsum dolor sit</option>
+                                        <option value="connection-3">Lorem ipsum dolor sit</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="search__form--item _auto">
+                                <label class="search__form--input-wrapper">
+                                    <input type="text" name="search" placeholder="Enter a name or title" class="search__form--input">
+                                    <svg class="search__form--input-icon" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.0792 18.3875L15.3666 13.675C16.4542 12.225 16.9375 10.6542 16.9375 8.84167C16.9375 6.66667 16.0917 4.6125 14.5208 3.04167C12.95 1.47083 10.8958 0.625 8.72082 0.625C6.54582 0.625 4.49165 1.47083 2.92082 3.04167C1.34998 4.6125 0.50415 6.66667 0.50415 8.84167C0.50415 11.0167 1.34998 13.0708 2.92082 14.6417C4.49165 16.2125 6.54582 17.0583 8.72082 17.0583C10.5333 17.0583 12.225 16.4542 13.5541 15.4875L18.2667 20.2C18.5083 20.4417 18.8708 20.5625 19.1125 20.5625C19.3542 20.5625 19.7167 20.4417 19.9583 20.2C20.5625 19.5958 20.5625 18.75 20.0792 18.3875ZM8.72082 14.5208C7.14998 14.5208 5.69998 13.9167 4.61248 12.8292C3.52498 11.7417 3.04165 10.2917 3.04165 8.72083C3.04165 7.15 3.64582 5.7 4.73332 4.6125C5.82082 3.525 7.14998 3.04167 8.72082 3.04167C10.2917 3.04167 11.7417 3.64583 12.8292 4.73333C13.9167 5.82083 14.5208 7.27083 14.5208 8.84167C14.5208 10.4125 13.9167 11.8625 12.8292 12.95C11.7417 14.0375 10.2917 14.5208 8.72082 14.5208Z" fill="#212121"/>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
                     </form>
+                    <div class="search__result">
+                        <div class="search__result--header decor-line">
+                            <div class="search__result--tab search__tab">
+                                <ul class="search__tab--list">
+                                    <li class="search__tab--item">
+                                        <a href="#" class="search__tab--btn _active">
+                                            Choose a connection (19 063)
+                                        </a>
+                                    </li>
+                                    <li class="search__tab--item">
+                                        <a href="#" class="search__tab--btn">
+                                            Choose a connection (32 165)
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="search__block">
+                            <ul class="search__list">
+                                <li class="search__card">
+    <a href="#" class="search__card--body">
+        <div class="search__card--header">
+            <div class="search__card--icon">
+                <img src="img/industry.svg" alt="" width="50" height="50" loading="lazy">
+            </div>
+            <div class="search__card--info">
+                <h3><b>JSC Halvichny Plant "Nalchik"</b></h3>
+                <div>
+                    <b>Date of birth: </b>
+                    <span>0700000327</span>
                 </div>
-            </section>
-            <section class="tag-cloud">
-                <div class="tag-cloud__container container">
-                    <h2 class="tag-cloud__title section-title decor-line">
-                        Tag Cloud
-                    </h2>
-                    <ul class="tag-cloud__list">
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Officials
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Сlients
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Finance 
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Officials
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Сlients
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Finance
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Officials
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Сlients
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Finance 
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Officials
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Сlients
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Finance
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Officials
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Сlients
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Finance 
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Officials
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Сlients
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Finance
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Officials
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Сlients
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Finance 
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Officials
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Сlients
-                            </div>
-                        </li>
-                        <li class="tag-cloud__item">
-                            <div class="tag-cloud__item--body">
-                                Finance
-                            </div>
-                        </li>
-                    </ul>
+            </div>
+        </div>
+        <div class="search__card--content">
+            <ul>
+                <li>
+                    <b>Connection:</b>
+                    <span>political observer, Oleg Viktorovich Morozov</span>
+                </li>
+            </ul>
+        </div>
+    </a>
+</li>
+<li class="search__card">
+    <a href="#" class="search__card--body">
+        <div class="search__card--header">
+            <div class="search__card--icon">
+                <img src="img/industry.svg" alt="" width="50" height="50" loading="lazy">
+            </div>
+            <div class="search__card--info">
+                <h3><b>NONAME Agency SA</b></h3>
+                <div>
+                    <b>TIN: </b>
+                    <span>NONAME Agency SA</span>
                 </div>
-            </section>
-            <section class="statistics">
-                <div class="statistics__container container">
-                    <h2 class="statistics__title section-title decor-line">
-                        Statistics
-                    </h2>
-                    <ul class="statistics__list">
-                        <li class="statistics__card">
-                            <div class="statistics__card--body">
-                                <span class="statistics__card--decor-title">
-                                    Articles 
-                                </span>
-                                <strong class="statistics__card--value">
-                                    187 880
-                                </strong>
-                                <h3 class="statistics__card--title">
-                                    Articles 
-                                </h3>
-                            </div>
-                        </li>
-                        <li class="statistics__card">
-                            <div class="statistics__card--body">
-                                <span class="statistics__card--decor-title">
-                                    Profiles of individuals
-                                </span>
-                                <strong class="statistics__card--value">
-                                    19 183
-                                </strong>
-                                <h3 class="statistics__card--title">
-                                    Profiles of individuals
-                                </h3>
-                            </div>
-                        </li>
-                        <li class="statistics__card">
-                            <div class="statistics__card--body">
-                                <span class="statistics__card--decor-title">
-                                    Profiles of public figures
-                                </span>
-                                <strong class="statistics__card--value">
-                                    8 408
-                                </strong>
-                                <h3 class="statistics__card--title">
-                                    Profiles of public figures
-                                </h3>
-                            </div>
-                        </li>
-                        <li class="statistics__card">
-                            <div class="statistics__card--body">
-                                <span class="statistics__card--decor-title">
-                                    Profiles of related and close people
-                                </span>
-                                <strong class="statistics__card--value">
-                                    10 775
-                                </strong>
-                                <h3 class="statistics__card--title">
-                                    Profiles of related and close people
-                                </h3>
-                            </div>
-                        </li>
-                    </ul>
+            </div>
+        </div>
+        <div class="search__card--content">
+            <ul>
+                <li>
+                    <b>Communication:</b>
+                    <span>Natalya Anatolyevna Pshenichnaya</span>
+                </li>
+            </ul>
+        </div>
+    </a>
+</li>
+<li class="search__card">
+    <a href="#" class="search__card--body">
+        <div class="search__card--header">
+            <div class="search__card--icon">
+                <img src="img/industry.svg" alt="" width="50" height="50" loading="lazy">
+            </div>
+            <div class="search__card--info">
+                <h3><b>JSC Halvichny Plant "Nalchik"</b></h3>
+                <div>
+                    <b>Date of birth: </b>
+                    <span>0700000327</span>
                 </div>
-            </section>
-            <section class="why-we-work">
-                <div class="why-we-work__container container">
-                    <h2 class="why-we-work__title section-title decor-line">
-                        Why we work?
-                    </h2>
-                    <ul class="why-we-work__list">
-                        <li class="why-we-work__item">
-                            <div class="why-we-work__item--body">
-                                <h3 class="why-we-work__item--title">
-                                    Corrupt high-ranking <br> officials
-                                </h3>
-                                <div class="why-we-work__item--text">
-                                    easily launder dirty money through the international banking system.
-                                </div>
+            </div>
+        </div>
+        <div class="search__card--content">
+            <ul>
+                <li>
+                    <b>Connection:</b>
+                    <span>political observer, Oleg Viktorovich Morozov</span>
+                </li>
+            </ul>
+        </div>
+    </a>
+</li>
+<li class="search__card">
+    <a href="#" class="search__card--body">
+        <div class="search__card--header">
+            <div class="search__card--icon">
+                <img src="img/industry.svg" alt="" width="50" height="50" loading="lazy">
+            </div>
+            <div class="search__card--info">
+                <h3><b>NONAME Agency SA</b></h3>
+                <div>
+                    <b>TIN: </b>
+                    <span>NONAME Agency SA</span>
+                </div>
+            </div>
+        </div>
+        <div class="search__card--content">
+            <ul>
+                <li>
+                    <b>Communication:</b>
+                    <span>Natalya Anatolyevna Pshenichnaya</span>
+                </li>
+            </ul>
+        </div>
+    </a>
+</li><li class="search__card">
+    <a href="#" class="search__card--body">
+        <div class="search__card--header">
+            <div class="search__card--icon">
+                <img src="img/industry.svg" alt="" width="50" height="50" loading="lazy">
+            </div>
+            <div class="search__card--info">
+                <h3><b>JSC Halvichny Plant "Nalchik"</b></h3>
+                <div>
+                    <b>Date of birth: </b>
+                    <span>0700000327</span>
+                </div>
+            </div>
+        </div>
+        <div class="search__card--content">
+            <ul>
+                <li>
+                    <b>Connection:</b>
+                    <span>political observer, Oleg Viktorovich Morozov</span>
+                </li>
+            </ul>
+        </div>
+    </a>
+</li>
+<li class="search__card">
+    <a href="#" class="search__card--body">
+        <div class="search__card--header">
+            <div class="search__card--icon">
+                <img src="img/industry.svg" alt="" width="50" height="50" loading="lazy">
+            </div>
+            <div class="search__card--info">
+                <h3><b>NONAME Agency SA</b></h3>
+                <div>
+                    <b>TIN: </b>
+                    <span>NONAME Agency SA</span>
+                </div>
+            </div>
+        </div>
+        <div class="search__card--content">
+            <ul>
+                <li>
+                    <b>Communication:</b>
+                    <span>Natalya Anatolyevna Pshenichnaya</span>
+                </li>
+            </ul>
+        </div>
+    </a>
+</li>
+<li class="search__card">
+    <a href="#" class="search__card--body">
+        <div class="search__card--header">
+            <div class="search__card--icon">
+                <img src="img/industry.svg" alt="" width="50" height="50" loading="lazy">
+            </div>
+            <div class="search__card--info">
+                <h3><b>JSC Halvichny Plant "Nalchik"</b></h3>
+                <div>
+                    <b>Date of birth: </b>
+                    <span>0700000327</span>
+                </div>
+            </div>
+        </div>
+        <div class="search__card--content">
+            <ul>
+                <li>
+                    <b>Connection:</b>
+                    <span>political observer, Oleg Viktorovich Morozov</span>
+                </li>
+            </ul>
+        </div>
+    </a>
+</li>
+<li class="search__card">
+    <a href="#" class="search__card--body">
+        <div class="search__card--header">
+            <div class="search__card--icon">
+                <img src="img/industry.svg" alt="" width="50" height="50" loading="lazy">
+            </div>
+            <div class="search__card--info">
+                <h3><b>NONAME Agency SA</b></h3>
+                <div>
+                    <b>TIN: </b>
+                    <span>NONAME Agency SA</span>
+                </div>
+            </div>
+        </div>
+        <div class="search__card--content">
+            <ul>
+                <li>
+                    <b>Communication:</b>
+                    <span>Natalya Anatolyevna Pshenichnaya</span>
+                </li>
+            </ul>
+        </div>
+    </a>
+</li><li class="search__card">
+    <a href="#" class="search__card--body">
+        <div class="search__card--header">
+            <div class="search__card--icon">
+                <img src="img/industry.svg" alt="" width="50" height="50" loading="lazy">
+            </div>
+            <div class="search__card--info">
+                <h3><b>JSC Halvichny Plant "Nalchik"</b></h3>
+                <div>
+                    <b>Date of birth: </b>
+                    <span>0700000327</span>
+                </div>
+            </div>
+        </div>
+        <div class="search__card--content">
+            <ul>
+                <li>
+                    <b>Connection:</b>
+                    <span>political observer, Oleg Viktorovich Morozov</span>
+                </li>
+            </ul>
+        </div>
+    </a>
+</li>
+<li class="search__card">
+    <a href="#" class="search__card--body">
+        <div class="search__card--header">
+            <div class="search__card--icon">
+                <img src="img/industry.svg" alt="" width="50" height="50" loading="lazy">
+            </div>
+            <div class="search__card--info">
+                <h3><b>NONAME Agency SA</b></h3>
+                <div>
+                    <b>TIN: </b>
+                    <span>NONAME Agency SA</span>
+                </div>
+            </div>
+        </div>
+        <div class="search__card--content">
+            <ul>
+                <li>
+                    <b>Communication:</b>
+                    <span>Natalya Anatolyevna Pshenichnaya</span>
+                </li>
+            </ul>
+        </div>
+    </a>
+</li>
+<li class="search__card">
+    <a href="#" class="search__card--body">
+        <div class="search__card--header">
+            <div class="search__card--icon">
+                <img src="img/industry.svg" alt="" width="50" height="50" loading="lazy">
+            </div>
+            <div class="search__card--info">
+                <h3><b>JSC Halvichny Plant "Nalchik"</b></h3>
+                <div>
+                    <b>Date of birth: </b>
+                    <span>0700000327</span>
+                </div>
+            </div>
+        </div>
+        <div class="search__card--content">
+            <ul>
+                <li>
+                    <b>Connection:</b>
+                    <span>political observer, Oleg Viktorovich Morozov</span>
+                </li>
+            </ul>
+        </div>
+    </a>
+</li>
+<li class="search__card">
+    <a href="#" class="search__card--body">
+        <div class="search__card--header">
+            <div class="search__card--icon">
+                <img src="img/industry.svg" alt="" width="50" height="50" loading="lazy">
+            </div>
+            <div class="search__card--info">
+                <h3><b>NONAME Agency SA</b></h3>
+                <div>
+                    <b>TIN: </b>
+                    <span>NONAME Agency SA</span>
+                </div>
+            </div>
+        </div>
+        <div class="search__card--content">
+            <ul>
+                <li>
+                    <b>Communication:</b>
+                    <span>Natalya Anatolyevna Pshenichnaya</span>
+                </li>
+            </ul>
+        </div>
+    </a>
+</li><li class="search__card">
+    <a href="#" class="search__card--body">
+        <div class="search__card--header">
+            <div class="search__card--icon">
+                <img src="img/industry.svg" alt="" width="50" height="50" loading="lazy">
+            </div>
+            <div class="search__card--info">
+                <h3><b>JSC Halvichny Plant "Nalchik"</b></h3>
+                <div>
+                    <b>Date of birth: </b>
+                    <span>0700000327</span>
+                </div>
+            </div>
+        </div>
+        <div class="search__card--content">
+            <ul>
+                <li>
+                    <b>Connection:</b>
+                    <span>political observer, Oleg Viktorovich Morozov</span>
+                </li>
+            </ul>
+        </div>
+    </a>
+</li>
+<li class="search__card">
+    <a href="#" class="search__card--body">
+        <div class="search__card--header">
+            <div class="search__card--icon">
+                <img src="img/industry.svg" alt="" width="50" height="50" loading="lazy">
+            </div>
+            <div class="search__card--info">
+                <h3><b>NONAME Agency SA</b></h3>
+                <div>
+                    <b>TIN: </b>
+                    <span>NONAME Agency SA</span>
+                </div>
+            </div>
+        </div>
+        <div class="search__card--content">
+            <ul>
+                <li>
+                    <b>Communication:</b>
+                    <span>Natalya Anatolyevna Pshenichnaya</span>
+                </li>
+            </ul>
+        </div>
+    </a>
+</li>
+<li class="search__card">
+    <a href="#" class="search__card--body">
+        <div class="search__card--header">
+            <div class="search__card--icon">
+                <img src="img/industry.svg" alt="" width="50" height="50" loading="lazy">
+            </div>
+            <div class="search__card--info">
+                <h3><b>JSC Halvichny Plant "Nalchik"</b></h3>
+                <div>
+                    <b>Date of birth: </b>
+                    <span>0700000327</span>
+                </div>
+            </div>
+        </div>
+        <div class="search__card--content">
+            <ul>
+                <li>
+                    <b>Connection:</b>
+                    <span>political observer, Oleg Viktorovich Morozov</span>
+                </li>
+            </ul>
+        </div>
+    </a>
+</li>
+<li class="search__card">
+    <a href="#" class="search__card--body">
+        <div class="search__card--header">
+            <div class="search__card--icon">
+                <img src="img/industry.svg" alt="" width="50" height="50" loading="lazy">
+            </div>
+            <div class="search__card--info">
+                <h3><b>NONAME Agency SA</b></h3>
+                <div>
+                    <b>TIN: </b>
+                    <span>NONAME Agency SA</span>
+                </div>
+            </div>
+        </div>
+        <div class="search__card--content">
+            <ul>
+                <li>
+                    <b>Communication:</b>
+                    <span>Natalya Anatolyevna Pshenichnaya</span>
+                </li>
+            </ul>
+        </div>
+    </a>
+</li>
+                            </ul>
+                        </div>
+                        <div class="search__result--footer">
+                            <div class="search__pagination">
+                                <button class="search__pagination--arrow _prev" type="button" title="Prev page">
+                                    <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 1L2 8L9 15" stroke="white" stroke-width="2.5"/>
+                                    </svg>
+                                </button>
+                                <ul class="search__pagination--list">
+                                    <li>
+                                        <a href="#">
+                                            1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            ...
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            10
+                                        </a>
+                                    </li>
+                                </ul>
+                                <button class="search__pagination--arrow _next" type="button" title="Next page">
+                                    <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L8 8L1 15" stroke="white" stroke-width="2.5"/>
+                                    </svg>
+                                </button>
                             </div>
-                        </li>
-                        <li class="why-we-work__item">
-                            <div class="why-we-work__item--body">
-                                <h3 class="why-we-work__item--title">
-                                    Special rules have been introduced in <br>the world 
-                                </h3>
-                                <div class="why-we-work__item--text">
-                                    to control the financial transactions of public persons: each financial institution must determine who their customers are, what is the nature of their money and assets, and where they come from.
-                                </div>
-                            </div>
-                        </li>
-                        <li class="why-we-work__item">
-                            <div class="why-we-work__item--body">
-                                <h3 class="why-we-work__item--title">
-                                    If the client is a politically exposed person
-                                </h3>
-                                <div class="why-we-work__item--text">
-                                    then his/her financial transactions should be carefully checked.
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

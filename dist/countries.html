@@ -113,6 +113,13 @@
                                 </div>
                             </div>
                             <div class="search__form--item">
+                                <label class="search__form--checkbox checkbox">
+                                    <input type="checkbox" name="search-in-section" class="checkbox__input">
+                                    <span class="checkbox__element"></span>
+                                    <span class="checkbox__text">Search in section</span>
+                                </label>
+                            </div>
+                            <div class="search__form--item">
                                 <div class="search__form--select-wrapper select-wrapper">
                                     <select name="connection" class="search__form--select select">
                                         <option disabled selected>Choose a connection</option>
@@ -121,6 +128,14 @@
                                         <option value="connection-3">Lorem ipsum dolor sit</option>
                                     </select>
                                 </div>
+                            </div>
+                            <div class="search__form--item _auto">
+                                <label class="search__form--input-wrapper">
+                                    <input type="text" name="search" placeholder="Enter a name or title" class="search__form--input">
+                                    <svg class="search__form--input-icon" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.0792 18.3875L15.3666 13.675C16.4542 12.225 16.9375 10.6542 16.9375 8.84167C16.9375 6.66667 16.0917 4.6125 14.5208 3.04167C12.95 1.47083 10.8958 0.625 8.72082 0.625C6.54582 0.625 4.49165 1.47083 2.92082 3.04167C1.34998 4.6125 0.50415 6.66667 0.50415 8.84167C0.50415 11.0167 1.34998 13.0708 2.92082 14.6417C4.49165 16.2125 6.54582 17.0583 8.72082 17.0583C10.5333 17.0583 12.225 16.4542 13.5541 15.4875L18.2667 20.2C18.5083 20.4417 18.8708 20.5625 19.1125 20.5625C19.3542 20.5625 19.7167 20.4417 19.9583 20.2C20.5625 19.5958 20.5625 18.75 20.0792 18.3875ZM8.72082 14.5208C7.14998 14.5208 5.69998 13.9167 4.61248 12.8292C3.52498 11.7417 3.04165 10.2917 3.04165 8.72083C3.04165 7.15 3.64582 5.7 4.73332 4.6125C5.82082 3.525 7.14998 3.04167 8.72082 3.04167C10.2917 3.04167 11.7417 3.64583 12.8292 4.73333C13.9167 5.82083 14.5208 7.27083 14.5208 8.84167C14.5208 10.4125 13.9167 11.8625 12.8292 12.95C11.7417 14.0375 10.2917 14.5208 8.72082 14.5208Z" fill="#212121"/>
+                                    </svg>
+                                </label>
                             </div>
                         </div>
                     </form>
@@ -141,8 +156,9 @@
                                 </ul>
                             </div>
                         </div>
-                        <ul class="search__list">
-                            <li class="search__card">
+                        <div class="search__block">
+                            <ul class="search__list">
+                                <li class="search__card">
     <a href="#" class="search__card--body">
         <div class="search__card--header">
             <div class="search__card--avatar">
@@ -587,7 +603,8 @@
         </div>
     </a>
 </li>
-                        </ul>
+                            </ul>
+                        </div>
                         <div class="search__result--footer">
                             <div class="search__pagination">
                                 <button class="search__pagination--arrow _prev" type="button" title="Prev page">
@@ -636,6 +653,308 @@
 
 
     </div>
+
+    <div class="article-popup popup" id="article-popup" style="display: none;">
+        <div class="article-popup__wrapper popup-wrapper">
+            <div class="article-popup__bg popup-bg popup-close"></div>
+            <div class="article-popup__body popup-body">
+                <button type="button" class="article-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 1.64992L19.3501 0L10.5 8.85042L1.64992 0L0 1.64992L8.85008 10.5L0 19.3501L1.64992 21L10.5 12.1499L19.3501 21L21 19.3501L12.1499 10.5L21 1.64992Z" fill="#2E2E2E"/>
+                    </svg>
+                </button>
+                <div class="article-popup__scroll-section popup-scroll-section">
+                    <div class="article__main relative">
+                        <div class="article__header">
+                            <h1 class="article__title main-title decor-line">
+                                Article title. Ultricies nec, pellentesque eu, pretium quis, sem.
+                            </h1>
+                            <div class="article__decor-text decor-text">Article</div>
+                            <div class="article__base-info">
+                                <ul class="article__base-info--list">
+                                    <li class="article__base-info--item">
+                                        <div class="article__base-info--icon">
+                                            <img src="img/calendar.svg" width="30" height="30" alt="">
+                                        </div>
+                                        <time class="article__base-info--text" datetime="12.12.2022">
+                                            12.12.2022
+                                        </time>
+                                    </li>
+                                    <li class="article__base-info--item">
+                                        <div class="article__base-info--icon">
+                                            <img src="img/search-worldwide.svg" width="34" height="34" alt="">
+                                        </div>
+                                        <span class="article__base-info--text" >
+                                            Source: https://www.1821324?related_id=1821324&origin=search
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="article__content">
+                            <p>
+                                Thus, a new model of organizational activity plays an important role in the formation of systems of mass participation. The significance of these problems is so obvious that the implementation of the planned targets contributes to the preparation and implementation of the appropriate activation conditions.
+                            </p>
+                            <p>
+                                Comrades! the existing structure of the organization plays an important role in shaping the appropriate conditions for activation. Ideological considerations of a higher order, as well as the beginning of everyday work on the formation of a position, provide a wide range of (specialists) participation in the formation of further development directions. It should not be forgotten, however, that consultation with a wide range of activists largely determines the creation of systems of mass participation.
+                            </p>
+                            <p>
+                                The task of the organization, in particular the strengthening and development of the structure, entails the process of introducing and modernizing the personnel training system, meets the urgent needs. Similarly, the established structure of the organization contributes to the preparation and implementation of directions for progressive development. The task of the organization, in particular the constant information and propaganda support of our activities, allows us to carry out important tasks in developing forms of development. The task of the organization, in particular the further development of various forms of activity, entails the process of introducing and modernizing the forms of development.
+                            </p>
+                            <q>
+                                “The scale of the exhibition is striking: it brings together the latest achievements in the field of labor protection, unique developments that are not yet on the market.
+                            </q>
+                            <h2>
+                                On the other hand, the implementation of planned targets assesses the significance of the form of development.
+                            </h2>
+                            <ul>
+                                <li>
+                                    On the other hand, the implementation of the planned targets makes it possible to assess the significance of the forms of development. The task of the organization, in particular the strengthening and development of the structure, entails the process of implementation.
+                                </li>
+                                <li>
+                                    On the other hand, the implementation of the planned targets makes it possible to assess the significance of the forms of development. The task of the organization, in particular the strengthening and development of the structure, entails the process of implementation.
+                                </li>
+                                <li>
+                                    On the other hand, the implementation of the planned targets makes it possible to assess the significance of the forms of development. The task of the organization, in particular the strengthening and development of the structure, entails the process of implementation.
+                                </li>
+                                <li>
+                                    On the other hand, the implementation of the planned targets makes it possible to assess the significance of the forms of development. The task of the organization, in particular the strengthening and development of the structure, entails the process of implementation.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="article__nav">
+                            <a href="#" class="article__btn btn _light">
+                                Previous news
+                            </a>
+                            <a href="#" class="article__btn btn">
+                                Next news
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scheme-popup popup" id="person-full-scheme" style="display: none;">
+        <div class="scheme-popup__wrapper popup-wrapper">
+            <div class="scheme-popup__bg popup-bg popup-close"></div>
+            <div class="scheme-popup__body popup-body">
+                <button type="button" class="scheme-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.971 47.971">
+                        <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"/>
+                    </svg>
+                </button>
+                <div class="person__scheme-tags">
+                    <div class="person__scheme-tags--body">
+                        <div class="tags">
+                            <ul class="tags__list">
+                                <li class="tags__item _active">
+                                    <div class="tags__item--body">
+                                        <div class="tags__item--icon">
+                                            <img src="img/person-icons/avatar.svg" width="27" height="27" alt="">
+                                        </div>
+                                        <div class="tags__item--text">
+                                            Man
+                                        </div>
+                                        <button class="tags__item--btn" type="button"></button>
+                                    </div>
+                                </li>
+                                <li class="tags__item">
+                                    <div class="tags__item--body">
+                                        <div class="tags__item--icon">
+                                            <img src="img/person-icons/avatar-woman.svg" width="27" height="27" alt="">
+                                        </div>
+                                        <div class="tags__item--text">
+                                            Woman
+                                        </div>
+                                        <button class="tags__item--btn" type="button"></button>
+                                    </div>
+                                </li>
+                                <li class="tags__item">
+                                    <div class="tags__item--body">
+                                        <div class="tags__item--icon">
+                                            <img src="img/person-icons/child.svg" width="27" height="27" alt="">
+                                        </div>
+                                        <div class="tags__item--text">
+                                            Child
+                                        </div>
+                                        <button class="tags__item--btn" type="button"></button>
+                                    </div>
+                                </li>
+                                <li class="tags__item">
+                                    <div class="tags__item--body">
+                                        <div class="tags__item--icon">
+                                            <img src="img/person-icons/bank.svg" width="27" height="27" alt="">
+                                        </div>
+                                        <div class="tags__item--text">
+                                            Bank (financial institution)
+                                        </div>
+                                        <button class="tags__item--btn" type="button"></button>
+                                    </div>
+                                </li>
+                                <li class="tags__item">
+                                    <div class="tags__item--body">
+                                        <div class="tags__item--icon">
+                                            <img src="img/person-icons/offshore.svg" width="27" height="27" alt="">
+                                        </div>
+                                        <div class="tags__item--text">
+                                            Offshore
+                                        </div>
+                                        <button class="tags__item--btn" type="button"></button>
+                                    </div>
+                                </li>
+                                <li class="tags__item _active">
+                                    <div class="tags__item--body">
+                                        <div class="tags__item--icon">
+                                            <img src="img/person-icons/company.svg" width="27" height="27" alt="">
+                                        </div>
+                                        <div class="tags__item--text">
+                                            Company
+                                        </div>
+                                        <button class="tags__item--btn" type="button"></button>
+                                    </div>
+                                </li>
+                                <li class="tags__item">
+                                    <div class="tags__item--body">
+                                        <div class="tags__item--icon">
+                                            <img src="img/person-icons/briefcase.svg" width="27" height="27" alt="">
+                                        </div>
+                                        <div class="tags__item--text">
+                                            Government representative
+                                        </div>
+                                        <button class="tags__item--btn" type="button"></button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="person__scheme scheme">
+                    <div class="person__scheme--wrapper">
+                        <div class="person__scheme--body scheme-body">
+                            <div class="person__scheme--item scheme-item" data-pos-x="left" data-pos-y="center">
+                                <div class="person__scheme--item-body">
+                                    <div class="person__scheme--icon">
+                                        <img src="img/person-icons/briefcase.svg" width="44" height="44" alt="">
+                                    </div>
+                                    <div class="person__scheme--text">
+                                        <h3>OGKU “Apparatus of the Public Chamber of the Ivanovo Region”</h3>
+                                        <p>
+                                            Deputy Chairman of Russia for the implementation of public control of a person in places of detention and assistance to persons in places of detention
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="person__scheme--item scheme-item" data-pos-x="right" data-pos-y="center">
+                                <div class="person__scheme--item-body">
+                                    <div class="person__scheme--icon">
+                                        <img src="img/person-icons/avatar.svg" width="44" height="44" alt="">
+                                    </div>
+                                    <div class="person__scheme--text">
+                                        <h3>Valery Ivanov</h3>
+                                        <p>
+                                            Business connections
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="person__scheme--item scheme-item" data-pos-x="center" data-pos-y="bottom">
+                                <div class="person__scheme--item-body">
+                                    <div class="person__scheme--icon">
+                                        <img src="img/person-icons/briefcase.svg" width="44" height="44" alt="">
+                                    </div>
+                                    <div class="person__scheme--text">
+                                        <h3>Ivanovo Humanitarian and Technical College</h3>
+                                        <p>
+                                            Director
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="person__scheme--item scheme-item" data-pos-x="right" data-pos-y="bottom">
+                                <div class="person__scheme--item-body">
+                                    <div class="person__scheme--icon">
+                                        <img src="img/person-icons/briefcase.svg" width="44" height="44" alt="">
+                                    </div>
+                                    <div class="person__scheme--text">
+                                        <h3>OGKU “Apparatus of the Public Chamber of the Ivanovo Region”</h3>
+                                        <p>
+                                            Deputy Chairman of Russia for the implementation of public control of a person in places of detention and assistance to persons in places of detention
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="person__scheme--item scheme-item" data-pos-x="right" data-pos-y="bottom">
+                                <div class="person__scheme--item-body">
+                                    <div class="person__scheme--icon">
+                                        <img src="img/person-icons/briefcase.svg" width="44" height="44" alt="">
+                                    </div>
+                                    <div class="person__scheme--text">
+                                        <h3>OGKU “Apparatus of the Public Chamber of the Ivanovo Region”</h3>
+                                        <p>
+                                            Deputy Chairman of Russia for the implementation of public control of a person in places of detention and assistance to persons in places of detention
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="person__scheme--item scheme-item" data-pos-x="left" data-pos-y="bottom">
+                                <div class="person__scheme--item-body">
+                                    <div class="person__scheme--icon">
+                                        <img src="img/person-icons/briefcase.svg" width="44" height="44" alt="">
+                                    </div>
+                                    <div class="person__scheme--text">
+                                        <h3>OGKU “Apparatus of the Public Chamber of the Ivanovo Region”</h3>
+                                        <p>
+                                            Deputy Chairman of Russia for the implementation of public control of a person in places of detention and assistance to persons in places of detention
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="person__scheme--item scheme-item" data-pos-x="left" data-pos-y="top">
+                                <div class="person__scheme--item-body">
+                                    <div class="person__scheme--icon">
+                                        <img src="img/person-icons/briefcase.svg" width="44" height="44" alt="">
+                                    </div>
+                                    <div class="person__scheme--text">
+                                        <h3>OGKU “Apparatus of the Public Chamber of the Ivanovo Region”</h3>
+                                        <p>
+                                            Deputy Chairman of Russia for the implementation of public control of a person in places of detention and assistance to persons in places of detention
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="person__scheme--item scheme-item" data-pos-x="left" data-pos-y="top">
+                                <div class="person__scheme--item-body">
+                                    <div class="person__scheme--icon">
+                                        <img src="img/person-icons/briefcase.svg" width="44" height="44" alt="">
+                                    </div>
+                                    <div class="person__scheme--text">
+                                        <h3>OGKU “Apparatus of the Public Chamber of the Ivanovo Region”</h3>
+                                        <p>
+                                            Deputy Chairman of Russia for the implementation of public control of a person in places of detention and assistance to persons in places of detention
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="person__scheme--item scheme-main-item">
+                                <div class="person__scheme--item-body">
+                                    <div class="person__scheme--icon _large">
+                                        <img src="img/person-icons/avatar-woman.svg" width="52" height="52" alt="">
+                                    </div>
+                                    <div class="person__scheme--text">
+                                        <h3>Bouguereau Tamara</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <svg class="person__scheme--lines scheme-lines"></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/libs.min.js"></script>
     <script src="js/main.min.js"></script>
 
 </body>
