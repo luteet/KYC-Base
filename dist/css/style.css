@@ -5503,6 +5503,10 @@ section:first-child {
         font-size: 2.8125rem
     }
 
+    .section-title.decor-line::before {
+        top: 18px
+    }
+
     .popup-close-btn {
         right: 39px;
         top: 47px;

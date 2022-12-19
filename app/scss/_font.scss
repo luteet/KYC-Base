@@ -58,7 +58,13 @@
     
     @include _992 {
         font-size: 2.8125rem;
+
+        &.decor-line::before {
+            top: 18px;
+        }
     }
+
+    
 
 }
 
