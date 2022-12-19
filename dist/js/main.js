@@ -552,19 +552,19 @@ document.querySelectorAll('.decor-span').forEach(item => {
   if(dataDelay) delayAnimation(dataDelay, item)
 })
 
-document.querySelector('.decor-letters').classList.add('decor-letters_active')
+if(document.querySelector('.decor-letters')) document.querySelector('.decor-letters').classList.add('decor-letters_active')
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
-/* 
+
 // =-=-=-=-=-=-=-=-=-=-=-=- <Анимации> -=-=-=-=-=-=-=-=-=-=-=-=
 
-wow = new WOW({
-mobile:       false,
-})
-wow.init();
+AOS.init({
+  // Global settings:
+  disable: 'mobile', 
+});
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </Анимации> -=-=-=-=-=-=-=-=-=-=-=-=
 
-*/
+
