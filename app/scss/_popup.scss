@@ -116,6 +116,10 @@
         @include _992 {
             padding: 130px 68px 30px 50px;
         }
+
+        & .decor-text {
+            z-index: -1;
+        }
     }
 
     // .article-popup__close-btn
@@ -146,6 +150,8 @@
     // .scheme-popup__body
 
     &__body {
+
+        
 
         & .person__scheme {
             min-height: auto;
