@@ -239,6 +239,11 @@
         & strong {
             color: #CD2020;
         }
+
+        & a {
+            color: #CD2020;
+            text-decoration: underline;
+        }
     }
 
     // .search__list
@@ -503,4 +508,3 @@
         }
     }
 }
-

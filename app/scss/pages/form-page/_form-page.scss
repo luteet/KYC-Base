@@ -26,6 +26,9 @@
     // .form-page__block
 
     &__block {
+        position: relative;
+        z-index: 2;
+
         display: flex;
         flex-wrap: wrap;
         align-items: flex-end;
@@ -53,6 +56,7 @@
         @include _768 {
             flex: 0 1 33.333%;
         }
+
         padding: 10px;
         
         @include _992 {
@@ -64,6 +68,13 @@
             flex: 1 1 auto;
             @include _992 {
                 flex: 0 1 50%;
+            }
+        }
+
+        &._super-large {
+            flex: 1 1 auto;
+            @include _992 {
+                flex: 0 1 75%;
             }
         }
 
@@ -79,11 +90,86 @@
             line-height: 194%;
             color: #212121;
 
+            display: block;
+
             @include _768 {
                 font-size: 1.125rem;
             }
         }
     }
+
+    // .form-page__switch
+
+	&__switch {
+
+        @include _768 {
+            max-width: 300px;
+        }
+
+		// .form-page__switch--body
+
+		&--body {
+            padding: 2px 2.5px;
+            background: #FFFFFF;
+            border: 2px solid #212121;
+
+            display: flex;
+            min-height: 70px;
+		}
+
+		// .form-page__switch--btn
+
+		&--btn {
+            position: relative;
+            padding: 2.5px;
+
+            cursor: pointer;
+            min-height: 100%;
+
+            flex: 0 1 50%;
+		}
+
+		// .form-page__switch--input
+
+		&--input {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0; visibility: hidden;
+		}
+
+        &--input:checked + &--name {
+            background: #212121;
+            color: #FFFFFF;
+        }
+
+		// .form-page__switch--name
+
+		&--name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 11px 15px;
+            min-height: 100%;
+            
+            text-align: center;
+
+            font-weight: 500;
+            font-size: 1.125rem;
+            line-height: 194%;
+
+            color: #212121;
+
+            transition: background .2s ease-in-out, color .2s ease-in-out;
+            &:hover {
+                background: #dddddd;
+            }
+            
+            &:active {
+                background: #c2c2c2;
+            }
+		}
+	}
 
     // .form-page__input
 
@@ -113,15 +199,13 @@
             background: #161616;
         }
 
-        @media (min-width: 500px) {
-            min-width: 264px;
-        }
+        min-width: 264px;
 
         @include _768 {
             font-size: 1.375rem;
         }
 
-        min-width: 100%; min-height: 70px;
+        /* min-width: 100%; */ min-height: 70px;
     }
 
     &__link {
@@ -132,5 +216,25 @@
         text-decoration-line: underline;
 
         color: #212121;
+    }
+
+    &__footer {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: space-between;
+        align-items: center;
+
+        flex: 1 1 100%;
+        padding: 10px;
+        
+        @include _992 {
+            padding: 17.5px;
+        }
+
+        margin: -10px;
+
+        & > * {
+            padding: 10px;
+        }
     }
 }

@@ -10,6 +10,25 @@
                         Signup form
                     </h1>
                     <div class="form-page__block">
+                        <div class="form-page__label">
+                            <span class="form-page__label--legend">Company</span>
+                            <div class="form-page__switch">
+                                <div class="form-page__switch--body">
+                                    <label class="form-page__switch--btn">
+                                        <input type="radio" name="gender" value="male" checked class="form-page__switch--input">
+                                        <span class="form-page__switch--name">
+                                            Male
+                                        </span>
+                                    </label>
+                                    <label class="form-page__switch--btn">
+                                        <input type="radio" name="gender" value="female" class="form-page__switch--input">
+                                        <span class="form-page__switch--name">
+                                            Female
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                         <label class="form-page__label">
                             <span class="form-page__label--legend">Company</span>
                             <input type="text" name="company" class="form-page__input input">
@@ -27,10 +46,6 @@
                             <input type="text" name="name" class="form-page__input input">
                         </label>
                         <label class="form-page__label">
-                            <span class="form-page__label--legend">Patronymic</span>
-                            <input type="text" name="patronymic" class="form-page__input input">
-                        </label>
-                        <label class="form-page__label">
                             <span class="form-page__label--legend">Address</span>
                             <input type="text" name="address" class="form-page__input input">
                         </label>
@@ -42,19 +57,21 @@
                             <span class="form-page__label--legend">Phone</span>
                             <input type="tel" name="phone" placeholder="+7 (123) 456-765-56" class="form-page__input input">
                         </label>
-                        <label class="form-page__label _large">
+                        <label class="form-page__label _full">
                             <span class="form-page__label--legend">Text</span>
                             <input type="text" name="message" placeholder="I’m applying for subscription..." class="form-page__input input">
                         </label>
-                        <div class="form-page__label">
-                            <button class="form-page__submit" type="submit">
-                                Submit
-                            </button>
-                        </div>
-                        <div class="form-page__label _full">
-                            <a href="login.html" class="form-page__link">
-                                Login
-                            </a>
+                        <div class="form-page__footer">
+                            <div class="form-page__footer--item">
+                                <a href="login.html" class="form-page__link">
+                                    Login
+                                </a>
+                            </div>
+                            <div class="form-page__footer--item">
+                                <button class="form-page__submit" type="submit">
+                                    Submit
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </form>
