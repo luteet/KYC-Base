@@ -3,6 +3,7 @@
     // .tag-cloud__container
 
     &__container {
+        width: 100%;
     }
 
     // .tag-cloud__title
@@ -10,25 +11,24 @@
     &__title {
     }
 
+    &__block {
+        padding-top: 25px;
+
+    }
+
     // .tag-cloud__list
 
     &__list {
-        padding-top: 25px;
-
-        display: flex;
-        flex-wrap: wrap;
-
-        margin: -4px;
-
-        @include _768 {
-            padding-top: 50px;
-            margin: -8px;
-        }
+        transition-timing-function: linear;
+        //transform: translate(-150%,0);
     }
 
     // .tag-cloud__item
 
     &__item {
+
+        display: inline-block;
+        width: auto;
 
         padding: 8px;
 

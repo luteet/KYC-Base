@@ -538,6 +538,19 @@ let articlesSlider = new Swiper('.articles__slider--body', {
     } */
 });
 
+let tagCloudBlock = new Swiper('.tag-cloud__block', {
+  slidesPerView: 'auto',
+  autoplay: {
+    delay: 0,
+    reverseDirection: true,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  speed: 2000,
+  loop: true,
+  loopAdditionalSlides: 1,
+})
+
 function delayAnimation(dataDelay, item) {
   dataDelay = dataDelay.replace('s', '') * 1000;
 
@@ -561,10 +574,8 @@ if(document.querySelector('.decor-letters')) document.querySelector('.decor-lett
 // =-=-=-=-=-=-=-=-=-=-=-=- <Анимации> -=-=-=-=-=-=-=-=-=-=-=-=
 
 AOS.init({
-  // Global settings:
-  disable: 'mobile', 
+  disable: 'mobile',
+  duration: 1000,
 });
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </Анимации> -=-=-=-=-=-=-=-=-=-=-=-=
-
-
