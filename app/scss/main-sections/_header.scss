@@ -24,11 +24,14 @@
         max-width: 105px;
         
         @media (min-width: 360px) {
-            max-width: 165px;
+            max-width: 175px;
+            width: 100%;
+            
         }
         
         &--img {
             width: 100%;
+            height: 57px;
         }
     }
 
@@ -134,7 +137,8 @@
 
         background: var(--white);
 
-        overflow: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
         transform: translate(100%,0);
 
         &._active {
@@ -157,16 +161,6 @@
         }
 
         transition: transform .5s ease-in-out;
-
-        /* @include _992 {
-            position: static;
-            width: auto; height: auto;
-            background-color: transparent;
-            padding: 0;
-            overflow: visible;
-
-            opacity: 1; visibility: visible;
-        } */
 
         &--body {
             display: flex;
