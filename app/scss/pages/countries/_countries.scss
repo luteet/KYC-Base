@@ -271,6 +271,9 @@
         
         @include _992 {
             grid-template-columns: repeat(3, 1fr);
+            &._3-card {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media(min-width: 1200px) {

@@ -6544,12 +6544,6 @@ input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-sea
     }
 }
 
-@media(min-width:992px) {
-    .personal-area__my-subscriptions--checkbox>label span {
-        font-size: 1.25rem
-    }
-}
-
 .personal-area__my-subscriptions--checkbox>label span::before {
     content: "";
     display: inline-block;
@@ -6634,8 +6628,14 @@ input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-sea
     background: #fff
 }
 
-.personal-area__collect-info {
-    padding-left: 30px
+@media(min-width:992px) {
+    .personal-area__my-subscriptions--checkbox>label span {
+        font-size: 1.25rem
+    }
+
+    .personal-area__collect-info {
+        padding-left: 30px
+    }
 }
 
 .personal-area__collect-info--block:not(:first-child) {
@@ -7337,6 +7337,11 @@ input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-sea
     .search__list {
         -ms-grid-columns: (1fr) [3];
         grid-template-columns: repeat(3,1fr)
+    }
+
+    .search__list._3-card {
+        -ms-grid-columns: (1fr) [2];
+        grid-template-columns: repeat(2,1fr)
     }
 
     .search__card--body {
