@@ -25,6 +25,7 @@
     "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^4.0.0",
     "gulp-zip": "^4.2.0",
+    "js-datepicker": "^5.18.2",
     "normalize.css": "^8.0.1",
     "sass": "^1.45.0",
     "scroll-lock": "^2.1.5",

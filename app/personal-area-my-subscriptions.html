@@ -11,25 +11,13 @@
                     </h1>
                     <div class="personal-area__block">
                         <aside class="personal-area__aside" data-aos="fade-up" data-aos-delay="400">
-                            <div class="personal-area__nav">
-                                <ul class="personal-area__nav--list">
-                                    <li class="personal-area__nav--item">
-                                        <a href="personal-area-contact-details.html" class="personal-area__nav--btn">
-                                            Contact details
-                                        </a>
-                                    </li>
-                                    <li class="personal-area__nav--item">
-                                        <a href="personal-area-subscriptions.html" class="personal-area__nav--btn">
-                                            Subscriptions
-                                        </a>
-                                    </li>
-                                    <li class="personal-area__nav--item">
-                                        <a href="personal-area-my-subscriptions.html" class="personal-area__nav--btn _active decor-line _center">
-                                            My Subscriptions
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                            @@include("html/_personal-area-nav.html", {
+                                "link_1": '',
+                                "link_2": '',
+                                "link_3": '_active decor-line _center',
+                                "link_4": '',
+                                "link_5": '',
+                            })
                         </aside>
                         <div class="personal-area__main">
                             <div class="personal-area__my-subscriptions">
@@ -47,6 +35,87 @@
                                                 <span>30$</span>
                                                 <span>14.12.2022</span>
                                                 <span>14.01.2023</span>
+                                            </div>
+                                            <div class="personal-area__my-subscriptions--notification">
+                                                <h3>
+                                                    Change notification time:
+                                                </h3>
+                                                <div class="personal-area__my-subscriptions--notification-row">
+                                                    <div class="personal-area__my-subscriptions--checkbox">
+                                                        <label>
+                                                            <input type="radio" name="notification" value="instant" checked>
+                                                            <span>Instant notification</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="personal-area__my-subscriptions--checkbox">
+                                                        <label>
+                                                            <input type="radio" name="notification" value="day">
+                                                            <span>Once a day</span>
+                                                        </label>
+                                                        <div class="personal-area__my-subscriptions--min-row">
+                                                            <div class="personal-area__my-subscriptions--min-select">
+                                                                <span>Select time:</span>
+                                                                <div>
+                                                                    <select name="once-day-time">
+                                                                        <option value="09:00" selected>09:00</option>
+                                                                        <option value="10:00">10:00</option>
+                                                                        <option value="11:00">11:00</option>
+                                                                        <option value="12:00">12:00</option>
+                                                                        <option value="13:00">13:00</option>
+                                                                        <option value="14:00">14:00</option>
+                                                                        <option value="15:00">15:00</option>
+                                                                        <option value="16:00">16:00</option>
+                                                                        <option value="17:00">17:00</option>
+                                                                        <option value="18:00">18:00</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="personal-area__my-subscriptions--checkbox">
+                                                        <label>
+                                                            <input type="radio" name="notification" value="week">
+                                                            <span>Once a week</span>
+                                                        </label>
+                                                        <div class="personal-area__my-subscriptions--min-row">
+                                                            <div class="personal-area__my-subscriptions--min-select">
+                                                                <span>Select day:</span>
+                                                                <div>
+                                                                    <select name="once-week-day">
+                                                                        <option value="Mon" selected>Mon</option>
+                                                                        <option value="Thu">Thu</option>
+                                                                        <option value="Wed">Wed</option>
+                                                                        <option value="Tue">Tue</option>
+                                                                        <option value="Fri">Fri</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="personal-area__my-subscriptions--min-select">
+                                                                <span>Select time:</span>
+                                                                <div>
+                                                                    <select name="once-week-time">
+                                                                        <option value="09:00" selected>09:00</option>
+                                                                        <option value="10:00">10:00</option>
+                                                                        <option value="11:00">11:00</option>
+                                                                        <option value="12:00">12:00</option>
+                                                                        <option value="13:00">13:00</option>
+                                                                        <option value="14:00">14:00</option>
+                                                                        <option value="15:00">15:00</option>
+                                                                        <option value="16:00">16:00</option>
+                                                                        <option value="17:00">17:00</option>
+                                                                        <option value="18:00">18:00</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="personal-area__my-subscriptions--checkbox">
+                                                        <label>
+                                                            <input type="radio" name="notification" value="disabled">
+                                                            <span>Disable Notifications</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

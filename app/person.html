@@ -120,7 +120,21 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="person__scheme-tags" data-aos="fade-in" data-aos-delay="200">
+                            <div class="person__mode">
+                                <ul class="person__mode--list">
+                                    <li class="person__mode--item">
+                                        <button class="person__mode--btn btn _light _active" type="button">
+                                            Monitoring
+                                        </button>
+                                    </li>
+                                    <li class="person__mode--item">
+                                        <button class="person__mode--btn btn _light" type="button">
+                                            Collection of information
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <div class="person__scheme-tags" data-aos="fade-in" data-aos-delay="200">
                                 <div class="person__scheme-tags--body">
                                     <div class="tags">
                                         <ul class="tags__list">
@@ -338,7 +352,7 @@
                                         </defs>
                                     </svg>
                                 </a>
-                            </div>
+                            </div> -->
                         </div>
                     </article>
                     <article class="person__block">
@@ -673,96 +687,121 @@
                         <button class="articles__slider--arrow swiper-button-prev"></button>
                         <button class="articles__slider--arrow swiper-button-next"></button>
                     </div>
+                    <form action="#" class="articles__filter">
+                        <div class="articles__filter--item">
+                            <h3 class="articles__filter--title">
+                                Period of publication:
+                            </h3>
+                            <div class="articles__filter--item-row">
+                                <label class="articles__filter--label custom-date">
+                                    <input type="text" name="start-date" placeholder="Start date" class="articles__filter--date custom-date__input">
+                                </label>
+                                <label class="articles__filter--label custom-date">
+                                    <input type="text" name="end-date" placeholder="Period end date" class="articles__filter--date custom-date__input">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="articles__filter--item">
+                            <h3 class="articles__filter--title">
+                                Sort by resources:
+                            </h3>
+                            <div class="articles__filter--item-row">
+                                <div class="articles__filter--select-wrapper select-wrapper">
+                                    <select name="resource" class="articles__filter--select select">
+                                        <option value="resource-name-1">Resource name (1)</option>
+                                        <option value="resource-name-2">Resource name (2)</option>
+                                        <option value="resource-name-3">Resource name (3)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="articles__filter--item">
+                            <h3 class="articles__filter--title">
+                                Sort by:
+                            </h3>
+                            <div class="articles__filter--item-row">
+                                <div class="articles__filter--select-wrapper select-wrapper">
+                                    <select name="sort-1" class="articles__filter--select select">
+                                        <option value="value-1">Descending</option>
+                                        <option value="value-2">Value 2</option>
+                                        <option value="value-3">Value 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="articles__filter--item">
+                            <h3 class="articles__filter--title">
+                                Sort by:
+                            </h3>
+                            <div class="articles__filter--item-row">
+                                <div class="articles__filter--select-wrapper select-wrapper">
+                                    <select name="sort-2" class="articles__filter--select select">
+                                        <option value="value-1">12 articles</option>
+                                        <option value="value-2">Value 2</option>
+                                        <option value="value-3">Value 3</option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </form>
                     <ul class="articles__list">
-                        <li class="articles__item" data-aos="zoom-in-right">
-                            <div class="articles__item--body">
-                                <h3>Article title. Ultricies nec, pellentesque eu, pretium quis, sem. </h3>
-                                <p>
-                                    Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-                                </p>
-                                <a href="#">
-                                    Read
-                                </a>
-                            </div>
-                        </li>
-                        <li class="articles__item" data-aos="zoom-in-right">
-                            <div class="articles__item--body">
-                                <h3>Article title. Ultricies nec, pellentesque eu, pretium quis, sem. </h3>
-                                <p>
-                                    Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-                                </p>
-                                <a href="#">
-                                    Read
-                                </a>
-                            </div>
-                        </li>
-                        <li class="articles__item" data-aos="zoom-in-right">
-                            <div class="articles__item--body">
-                                <h3>Article title. Ultricies nec, pellentesque eu, pretium quis, sem. </h3>
-                                <p>
-                                    Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-                                </p>
-                                <a href="#">
-                                    Read
-                                </a>
-                            </div>
-                        </li>
-                        <li class="articles__item" data-aos="zoom-in-right">
-                            <div class="articles__item--body">
-                                <h3>Article title. Ultricies nec, pellentesque eu, pretium quis, sem. </h3>
-                                <p>
-                                    Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-                                </p>
-                                <a href="#">
-                                    Read
-                                </a>
-                            </div>
-                        </li>
-                        <li class="articles__item" data-aos="zoom-in-right">
-                            <div class="articles__item--body">
-                                <h3>Article title. Ultricies nec, pellentesque eu, pretium quis, sem. </h3>
-                                <p>
-                                    Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-                                </p>
-                                <a href="#">
-                                    Read
-                                </a>
-                            </div>
-                        </li>
-                        <li class="articles__item" data-aos="zoom-in-right">
-                            <div class="articles__item--body">
-                                <h3>Article title. Ultricies nec, pellentesque eu, pretium quis, sem. </h3>
-                                <p>
-                                    Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-                                </p>
-                                <a href="#">
-                                    Read
-                                </a>
-                            </div>
-                        </li>
-                        <li class="articles__item" data-aos="zoom-in-right">
-                            <div class="articles__item--body">
-                                <h3>Article title. Ultricies nec, pellentesque eu, pretium quis, sem. </h3>
-                                <p>
-                                    Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-                                </p>
-                                <a href="#">
-                                    Read
-                                </a>
-                            </div>
-                        </li>
-                        <li class="articles__item" data-aos="zoom-in-right">
-                            <div class="articles__item--body">
-                                <h3>Article title. Ultricies nec, pellentesque eu, pretium quis, sem. </h3>
-                                <p>
-                                    Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-                                </p>
-                                <a href="#">
-                                    Read
-                                </a>
-                            </div>
-                        </li>
+                        @@loop("html/_article-item.html", [
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                            {},
+                        ])
                     </ul>
+                    <div class="articles__footer">
+                        <div class="search__pagination">
+                            <button class="search__pagination--arrow _prev" type="button" title="Prev page">
+                                <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 1L2 8L9 15" stroke="white" stroke-width="2.5"/>
+                                </svg>
+                            </button>
+                            <ul class="search__pagination--list">
+                                <li>
+                                    <a>
+                                        1
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        2
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        3
+                                    </a>
+                                </li>
+                                <li>
+                                    <span>
+                                        ...
+                                    </span>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        10
+                                    </a>
+                                </li>
+                            </ul>
+                            <button class="search__pagination--arrow _next" type="button" title="Next page">
+                                <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L8 8L1 15" stroke="white" stroke-width="2.5"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

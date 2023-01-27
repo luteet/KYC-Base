@@ -1,0 +1,91 @@
+@@include("html/_header-page-address.html", {
+    "link-1": 'Countries',
+    "link-2": 'All countries',
+})
+
+        <main class="main">
+            <section class="search">
+                <div class="search__container container">
+                    <form action="#" class="search__form">
+                        <div class="search__decor-text decor-text">
+                            <div class="arrays">
+                                <div class="sec"></div>
+                                <div class="sec"></div>
+                                <div class="sec"></div>
+                                <div class="sec"></div>
+                                <div class="sec"></div>
+                            </div>
+                            <span class="decor-letters">
+                                <span>S</span>
+                                <span>e</span>
+                                <span>a</span>
+                                <span>r</span>
+                                <span>c</span>
+                                <span>h</span>
+                                <span>&nbsp;</span>
+                                <span>b</span>
+                                <span>y</span>
+                                <span>&nbsp;</span>
+                                <span>c</span>
+                                <span>o</span>
+                                <span>u</span>
+                                <span>n</span>
+                                <span>t</span>
+                                <span>r</span>
+                                <span>y</span>
+                            </span>
+                        </div>
+                        <h1 class="search__title main-title decor-line">
+                            <span class="decor-span" data-decor-delay="0.0s"><span>Search results for “Хотин”</span></span>
+                        </h1>
+                        <div class="search__form--row">
+                            <div class="search__form--item" data-aos="fade-down" data-aos-duration="1000" data-aos-anchor=".search__form">
+                                <label class="search__form--date date">
+                                    <input type="date" class="date__input" name="date">
+                                </label>
+                            </div>
+                            <div class="search__form--item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400" data-aos-anchor=".search__form">
+                                <label class="search__form--date date">
+                                    <input type="date" class="date__input" name="date">
+                                </label>
+                            </div>
+                            <div class="search__form--item _full" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="800" data-aos-anchor=".search__form">
+                                <label class="search__form--input-wrapper">
+                                    <input type="text" name="search" placeholder="Enter a name or title" value="Хотин" class="search__form--input">
+                                    <svg class="search__form--input-icon" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.0792 18.3875L15.3666 13.675C16.4542 12.225 16.9375 10.6542 16.9375 8.84167C16.9375 6.66667 16.0917 4.6125 14.5208 3.04167C12.95 1.47083 10.8958 0.625 8.72082 0.625C6.54582 0.625 4.49165 1.47083 2.92082 3.04167C1.34998 4.6125 0.50415 6.66667 0.50415 8.84167C0.50415 11.0167 1.34998 13.0708 2.92082 14.6417C4.49165 16.2125 6.54582 17.0583 8.72082 17.0583C10.5333 17.0583 12.225 16.4542 13.5541 15.4875L18.2667 20.2C18.5083 20.4417 18.8708 20.5625 19.1125 20.5625C19.3542 20.5625 19.7167 20.4417 19.9583 20.2C20.5625 19.5958 20.5625 18.75 20.0792 18.3875ZM8.72082 14.5208C7.14998 14.5208 5.69998 13.9167 4.61248 12.8292C3.52498 11.7417 3.04165 10.2917 3.04165 8.72083C3.04165 7.15 3.64582 5.7 4.73332 4.6125C5.82082 3.525 7.14998 3.04167 8.72082 3.04167C10.2917 3.04167 11.7417 3.64583 12.8292 4.73333C13.9167 5.82083 14.5208 7.27083 14.5208 8.84167C14.5208 10.4125 13.9167 11.8625 12.8292 12.95C11.7417 14.0375 10.2917 14.5208 8.72082 14.5208Z" fill="#212121"/>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="search__result">
+                        <div class="search__result--header decor-line">
+                            <div class="search__result--tab search__tab" data-aos="fade-right" data-aos-duration="1000">
+                                <ul class="search__tab--list">
+                                    <li class="search__tab--item">
+                                        <a href="#" class="search__tab--btn _active">
+                                            View profile
+                                        </a>
+                                    </li>
+                                    <li class="search__tab--item">
+                                        <a href="#" class="search__tab--btn">
+                                            Open links
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="search__block">
+                            <ul class="search__list">
+                                @@loop("html/_search-card.html", [
+                                    {},
+                                ])
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+@@include("html/_footer.html")

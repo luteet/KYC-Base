@@ -11,25 +11,13 @@
                     </h1>
                     <div class="personal-area__block">
                         <aside class="personal-area__aside" data-aos="fade-up" data-aos-delay="400">
-                            <div class="personal-area__nav">
-                                <ul class="personal-area__nav--list">
-                                    <li class="personal-area__nav--item">
-                                        <a href="personal-area-contact-details.html" class="personal-area__nav--btn">
-                                            Contact details
-                                        </a>
-                                    </li>
-                                    <li class="personal-area__nav--item">
-                                        <a href="personal-area-subscriptions.html" class="personal-area__nav--btn _active decor-line _center">
-                                            Subscriptions
-                                        </a>
-                                    </li>
-                                    <li class="personal-area__nav--item">
-                                        <a href="personal-area-my-subscriptions.html" class="personal-area__nav--btn">
-                                            My Subscriptions
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                            @@include("html/_personal-area-nav.html", {
+                                "link_1": '',
+                                "link_2": '_active decor-line _center',
+                                "link_3": '',
+                                "link_4": '',
+                                "link_5": '',
+                            })
                         </aside>
                         <div class="personal-area__main">
                             <div class="personal-area__subscriptions">

@@ -1,90 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.min.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 
-    <div class="wrapper">
-        <header class="header">
-            <div class="header__container container">
-                <div class="header__row">
-                    <a href="#" class="header__logo">
-                        <img src="img/logo.svg" alt="" width="165" height="37" class="header__logo--img">
-                    </a>
-                    <nav class="header__nav">
-                        <div class="header__nav--body">
-                            <div class="header__nav--decor-title">
-                                 <!-- NEW -->
-                                 <div class="arrays">
-                                    <div class="sec"></div>
-                                    <div class="sec"></div>
-                                    <div class="sec"></div>
-                                    <div class="sec"></div>
-                                    <div class="sec"></div>
-                                </div>
-                                <span>Menu</span>
-                                <!-- NEW -->
-                            </div>
-                            <ul class="header__nav--list">
-                                <li class="header__nav--item" style="animation-delay: 0.5s;">
-                                    <a href="#" class="header__nav--link" data-number="00" data-text="Home">
-                                        Home
-                                    </a>
-                                </li>
-                                <li class="header__nav--item" style="animation-delay: 0.7s;">
-                                    <a href="#" class="header__nav--link" data-number="01" data-text="Countries">
-                                        Countries
-                                    </a>
-                                </li>
-                                <li class="header__nav--item" style="animation-delay: 0.9s;">
-                                    <a href="#" class="header__nav--link" data-number="02" data-text="About the registry">
-                                        About the registry
-                                    </a>
-                                </li>
-                                <li class="header__nav--item" style="animation-delay: 1.1s;">
-                                    <a href="#" class="header__nav--link" data-number="03" data-text="To report">
-                                        To report
-                                    </a>
-                                </li>
-                                <li class="header__nav--item" style="animation-delay: 1.3s;">
-                                    <a href="#" class="header__nav--link" data-number="04" data-text="Entrance">
-                                        Entrance
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                    <div class="header__burger">
-                        <div class="header__burger--text">
-                            Menu
-                        </div>
-                        <button class="header__burger--btn" type="button" aria-label="Site menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="header__row">
-                    <div class="header__lang">
-                        <ul class="header__lang--list">
-                            <li class="header__lang--item">
-                                <a href="#" class="header__lang--link" data-text="RU">
-                                    RU
-                                </a>
-                            </li>
-                            <li class="header__lang--item">
-                                <a href="#" class="header__lang--link" data-text="EN">
-                                    EN
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </header>
-    
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container container">
+				<div class="header__row">
+					<a href="#" class="header__logo">
+						<img src="img/logo.svg" alt="" width="165" height="37" class="header__logo--img">
+					</a>
+					<form action="#" class="header__search">
+						<div class="header__search--body">
+							<label class="header__search--label">
+								<input type="search" name="search" placeholder="Enter the name of the person or company" required class="header__search--input search-input">
+							</label>
+							<button class="header__search--submit" type="submit" title="Search">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9.93945 0.931641C4.98074 0.931641 0.941406 4.97096 0.941406 9.9297C0.941406 14.8884 4.98074 18.9356 9.93945 18.9356C12.0575 18.9356 14.0054 18.1933 15.5449 16.961L19.293 20.707C19.4821 20.8883 19.7347 20.9884 19.9967 20.9857C20.2587 20.983 20.5093 20.8779 20.6947 20.6927C20.8801 20.5076 20.9856 20.2572 20.9886 19.9953C20.9917 19.7333 20.892 19.4805 20.7109 19.2911L16.9629 15.5431C18.1963 14.0012 18.9395 12.0502 18.9395 9.9297C18.9395 4.97096 14.8982 0.931641 9.93945 0.931641ZM9.93945 2.93167C13.8173 2.93167 16.9375 6.05187 16.9375 9.9297C16.9375 13.8075 13.8173 16.9356 9.93945 16.9356C6.06162 16.9356 2.94141 13.8075 2.94141 9.9297C2.94141 6.05187 6.06162 2.93167 9.93945 2.93167Z" fill="white"/>
+								</svg>
+							</button>
+						</div>
+					</form>
+					<nav class="header__nav">
+						<div class="header__nav--body">
+							<div class="header__nav--decor-title">
+								 <!-- NEW -->
+								 <div class="arrays">
+									<div class="sec"></div>
+									<div class="sec"></div>
+									<div class="sec"></div>
+									<div class="sec"></div>
+									<div class="sec"></div>
+								</div>
+								<span>Menu</span>
+								<!-- NEW -->
+							</div>
+							<div class="header__nav--block">
+								<form action="#" class="header__nav--verify header__verify">
+									<h3 class="header__verify--title">
+										Search
+									</h3>
+									<div class="header__verify--row">
+										<label class="header__verify--label">
+											<input type="search" name="search" placeholder="Enter the name of the person or company" class="header__verify--input search-input">
+										</label>
+										<button class="header__verify--submit btn _min" type="submit">
+											Verify
+										</button>
+									</div>
+								</form>
+								<ul class="header__nav--list">
+									<li class="header__nav--item" style="animation-delay: 0.5s;">
+										<a href="#" class="header__nav--link" data-number="00" data-text="Home">
+											Home
+										</a>
+									</li>
+									<li class="header__nav--item" style="animation-delay: 0.7s;">
+										<a href="#" class="header__nav--link" data-number="01" data-text="Countries">
+											Countries
+										</a>
+									</li>
+									<li class="header__nav--item" style="animation-delay: 0.9s;">
+										<a href="#" class="header__nav--link" data-number="02" data-text="About the registry">
+											About the registry
+										</a>
+									</li>
+									<li class="header__nav--item" style="animation-delay: 1.1s;">
+										<a href="#" class="header__nav--link" data-number="03" data-text="To report">
+											To report
+										</a>
+									</li>
+									<li class="header__nav--item" style="animation-delay: 1.3s;">
+										<a href="#" class="header__nav--link" data-number="04" data-text="Entrance">
+											Entrance
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+					<div class="header__burger">
+						<div class="header__burger--text">
+							Menu
+						</div>
+						<button class="header__burger--btn" type="button" aria-label="Site menu">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+				</div>
+				<div class="header__row">
+					<div class="header__lang">
+						<ul class="header__lang--list">
+							<li class="header__lang--item">
+								<a href="#" class="header__lang--link" data-text="RU">
+									RU
+								</a>
+							</li>
+							<li class="header__lang--item">
+								<a href="#" class="header__lang--link" data-text="EN">
+									EN
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+	

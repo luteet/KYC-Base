@@ -1,0 +1,61 @@
+@@include("html/_header-page-address-2.html", {
+    "link": 'Personal Ares',
+})
+
+        <main class="main">
+            <section class="personal-area">
+                <div class="personal-area__container container relative">
+                    <div class="personal-area__decor-text decor-text" data-aos="fade-right" data-aos-delay="400">Personal Area</div>
+                    <h1 class="personal-area__title main-title decor-line" data-aos="fade-down">
+                        Collection of information
+                    </h1>
+                    <div class="personal-area__block">
+                        <aside class="personal-area__aside" data-aos="fade-up" data-aos-delay="400">
+                            @@include("html/_personal-area-nav.html", {
+                                "link_1": '',
+                                "link_2": '',
+                                "link_3": '',
+                                "link_4": '_active decor-line _center',
+                                "link_5": '',
+                            })
+                        </aside>
+                        <div class="personal-area__main">
+                            <div class="personal-area__collect-info">
+                                <div class="personal-area__collect-info--block">
+                                    <h3 class="personal-area__collect-info--title">
+                                        Person
+                                    </h3>
+                                    <ul class="personal-area__collect-info--list search__list _3-card">
+                                        @@loop("html/_search-cards-5.html", [
+                                            {},
+                                        ])
+                                    </ul>
+                                    <div class="personal-area__collect-info--footer">
+                                        <a href="#" class="personal-area__collect-info--add btn">
+                                            Add person
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="personal-area__collect-info--block">
+                                    <h3 class="personal-area__collect-info--title">
+                                        Company
+                                    </h3>
+                                    <ul class="personal-area__collect-info--list search__list _3-card">
+                                        @@loop("html/_search-cards-4.html", [
+                                            {},
+                                        ])
+                                    </ul>
+                                    <div class="personal-area__collect-info--footer">
+                                        <a href="#" class="personal-area__collect-info--add btn">
+                                            Add person
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+@@include("html/_footer.html")

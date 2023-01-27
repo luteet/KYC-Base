@@ -303,6 +303,51 @@
         }
     }
 
+    // .person__mode
+
+    &__mode {
+
+        padding-top: 40px;
+
+        // .person__mode--list
+
+        &--list {
+            display: flex;
+            flex-wrap: wrap;
+
+            margin: -10px;
+        }
+
+        // .person__mode--item
+
+        &--item {
+            padding: 10px;
+        }
+
+        // .person__mode--btn
+
+        &--btn {
+            
+            /* background: var(--white);
+            color: var(--dark); */
+            
+            &._active {
+                background: var(--dark);
+                color: var(--white);
+                &:hover {
+                    background: var(--dark);
+                    color: var(--white);
+                }
+                
+                &:active {
+                    background: var(--dark);
+                    color: var(--white);
+                }
+            }
+            
+        }
+    }
+
     // .person__scheme
 
     &__scheme {

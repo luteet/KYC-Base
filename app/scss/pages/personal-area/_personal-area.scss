@@ -292,7 +292,7 @@
 
         &--item {
             flex: 1 1 100%;
-            @media (min-width: 500px) {
+            @media (min-width: 650px) {
                 flex: 0 1 50%;
             }
             @include _768 {
@@ -465,6 +465,136 @@
             width: 100%;
             
         }
+
+        // .personal-area__subscriptions-card--notification
+
+        &--notification {
+            padding: 24px 31px;
+            border-top: 1px solid #C9C9C9;
+            & h5 {
+                font-weight: 600;
+                font-size: 1rem;
+                @include _768 {
+                    font-size: 1.125rem;
+                }
+                
+                @include _992 {
+                    font-size: 1.25rem;
+                }
+                line-height: 150%;
+                color: #1D1D1D;
+
+            }
+        }
+
+        // .personal-area__subscriptions-card--checkbox
+
+        &--checkbox {
+            margin-top: 20px;
+
+            & > label {
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                & input:checked + span::after {
+                    opacity: 1;
+                }
+
+                & span {
+                    display: inline-flex;
+                    align-items: center;
+                    padding-left: 43px;
+
+                    font-size: 1rem;
+                    @include _768 {
+                        font-size: 1.125rem;
+                    }
+                    
+                    @include _992 {
+                        font-size: 1.25rem;
+                    }
+                    line-height: 133%;
+                    color: #1D1D1D;
+
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        position: absolute;
+                        left: 0; top: 50%;
+                        transform: translate(0,-50%);
+                        width: 30px; height: 30px;
+                        border: 1px solid #212121; 
+                        cursor: pointer;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0; top: 50%;
+                        transform: translate(0,-50%);
+                        width: 30px; height: 30px;
+                        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.2121 8.60921C4.1071 8.71483 3.96384 8.77376 3.81503 8.77376C3.66621 8.77376 3.52295 8.71483 3.41795 8.60921L0.246821 5.43756C-0.0822736 5.10847 -0.0822736 4.57482 0.246821 4.24634L0.643894 3.84917C0.973091 3.52007 1.50612 3.52007 1.83522 3.84917L3.81503 5.82908L9.16476 0.479243C9.49396 0.150148 10.0275 0.150148 10.3561 0.479243L10.7532 0.876418C11.0823 1.20551 11.0823 1.73906 10.7532 2.06764L4.2121 8.60921Z' fill='black'/%3E%3C/svg%3E%0A")
+                        center / 40% no-repeat;
+                        opacity: 0;
+                        transition: opacity .2s ease-in-out;
+                        cursor: pointer;
+                    }
+                }
+
+                & input {
+                    position: absolute;
+                    left: 10px; top: 50%;
+                    transform: translate(0,-50%);
+                    opacity: 0; visibility: hidden;
+                }
+            }
+        }
+
+        // .personal-area__subscriptions-card--min-row
+
+        &--min-row {
+            padding-left: 43px; padding-top: 10px;
+
+            margin: -4.5px;
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        // .personal-area__subscriptions-card--min-select
+
+        &--min-select {
+            padding: 4.5px;
+
+            display: flex;
+            align-items: center;
+
+            & > span {
+                padding-right: 6px;
+            }
+
+            & > div {
+                border: 1px solid #000000;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 10px; top: 50%;
+                    transform: translate(0,-50%);
+                    width: 10px; height: 10px;
+                    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.25 1L4.625 4.625L1 1' stroke='black'/%3E%3C/svg%3E%0A")
+                    center / contain no-repeat;
+                    pointer-events: none;
+                }
+            }
+
+            & select {
+                cursor: pointer;
+                -webkit-appearance: none;
+                padding: 10px 29px 9px 13px;
+            }
+        }
     }
 
     // .personal-area__my-subscriptions
@@ -532,24 +662,22 @@
             flex-direction: column;
 
             position: relative;
-            &::before {
+            /* &::before {
                 content: '';
                 position: absolute;
                 left: 0; bottom: -1px;
                 width: 25px; height: 25px;
                 background: #FFF;
                 clip-path: polygon(0 0, 0% 100%, 100% 100%);
-            }
+            } */
             &::after {
-                content: '';
-                position: absolute;
-                right: -1px; top: -1px;
-                width: 7.5%; height: calc(100% + 2px);
-                background: #FFF;
-                clip-path: polygon(75% 0, 100% 0, 25% 100%, 0% 100%);
-
                 @include _992 {
-                    right: 7.5%; width: 7.5%;
+                    content: '';
+                    position: absolute;
+                    right: 0; top: -1px;
+                    width: 14.5%; height: calc(100% + 2px);
+                    background: #FFF;
+                    clip-path: polygon(65% 0, 100% 0, 35% 100%, 0% 100%);
                 }
             }
         }
@@ -635,6 +763,212 @@
                 padding: 15px 20px 15px 0;
             }
 
+        }
+
+        // .personal-area__my-subscriptions--notification
+
+        &--notification {
+            padding: 19px 30px 19px 30px;
+            @include _992 {
+                padding: 19px 160px 35px 60px;
+            }
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+            & h3 {
+                font-weight: 900;
+                font-family: var(--title-font);
+                font-size: 1.125rem;
+                @include _768 {
+                    font-size: 1.25rem;
+                }
+                
+                @include _992 {
+                    font-size: 1.5625rem;
+                }
+                line-height: 100%;
+                color: #FFFFFF;
+            }
+        }
+
+        // .personal-area__my-subscriptions--notification-row
+
+        &--notification-row {
+            display: flex;
+            flex-wrap: wrap;
+
+            margin: -24px;
+            padding-top: 22px;
+        }
+
+        // .personal-area__my-subscriptions--checkbox
+
+        &--checkbox {
+            padding: 24px;
+
+            & > label {
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                & input:checked + span::after {
+                    opacity: 1;
+                }
+
+                & span {
+                    display: inline-flex;
+                    align-items: center;
+                    padding-left: 43px;
+
+                    font-size: 1rem;
+                    @include _768 {
+                        font-size: 1.125rem;
+                    }
+                    
+                    @include _992 {
+                        font-size: 1.25rem;
+                    }
+                    line-height: 133%;
+                    color: #FFF;
+
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        position: absolute;
+                        left: 0; top: 50%;
+                        transform: translate(0,-50%);
+                        width: 30px; height: 30px;
+                        border: 1px solid #212121;
+                        background: #FFF;
+                        cursor: pointer;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0; top: 50%;
+                        transform: translate(0,-50%);
+                        width: 30px; height: 30px;
+                        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.2121 8.60921C4.1071 8.71483 3.96384 8.77376 3.81503 8.77376C3.66621 8.77376 3.52295 8.71483 3.41795 8.60921L0.246821 5.43756C-0.0822736 5.10847 -0.0822736 4.57482 0.246821 4.24634L0.643894 3.84917C0.973091 3.52007 1.50612 3.52007 1.83522 3.84917L3.81503 5.82908L9.16476 0.479243C9.49396 0.150148 10.0275 0.150148 10.3561 0.479243L10.7532 0.876418C11.0823 1.20551 11.0823 1.73906 10.7532 2.06764L4.2121 8.60921Z' fill='black'/%3E%3C/svg%3E%0A")
+                        center / 40% no-repeat;
+                        opacity: 0;
+                        transition: opacity .2s ease-in-out;
+                        cursor: pointer;
+                    }
+                }
+
+                & input {
+                    position: absolute;
+                    left: 10px; top: 50%;
+                    transform: translate(0,-50%);
+                    opacity: 0; visibility: hidden;
+                }
+            }
+        }
+
+        // .personal-area__my-subscriptions--min-row
+
+        &--min-row {
+            display: flex;
+            flex-wrap: wrap;
+
+            margin: -4.5px;
+            padding-left: 43px; padding-top: 13px;
+        }
+
+        // .personal-area__my-subscriptions--min-select
+
+        &--min-select {
+            padding: 4.5px;
+
+            display: flex;
+            align-items: center;
+
+            color: #FFF;
+
+            & > span {
+                padding-right: 6px;
+            }
+
+            & > div {
+                border: 1px solid #000000;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 10px; top: 50%;
+                    transform: translate(0,-50%);
+                    width: 10px; height: 10px;
+                    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.25 1L4.625 4.625L1 1' stroke='black'/%3E%3C/svg%3E%0A")
+                    center / contain no-repeat;
+                    pointer-events: none;
+                }
+            }
+
+            & select {
+                cursor: pointer;
+                -webkit-appearance: none;
+                padding: 6px 29px 6px 13px;
+                background: #FFF;
+            }
+        }
+    }
+
+    // .personal-area__collect-info
+
+    &__collect-info {
+
+        padding-left: 30px;
+
+        // .personal-area__collect-info--block
+
+        &--block {
+            &:not(:first-child) {
+                padding-top: 60px;
+            }
+        }
+
+        // .personal-area__collect-info--title
+
+        &--title {
+            font-weight: 900;
+            font-family: var(--title-font);
+            font-size: 1.175rem;
+            @include _768 {
+                font-size: 1.75rem;
+            }
+            
+            @include _992 {
+                font-size: 2.1875rem;
+            }
+            line-height: 100%;
+            color: #212121;
+        }
+
+        // .personal-area__collect-info--list
+
+        &--list {
+            padding-top: 25px;
+        }
+
+        // .personal-area__collect-info--footer
+
+        &--footer {
+            padding-top: 30px;
+        }
+
+        // .personal-area__collect-info--add
+
+        &--add {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 17px; top: 50%;
+                transform: translate(0,-50%);
+                width: 21px; height: 21px;
+                background: url("data:image/svg+xml,%3Csvg viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.8102 9.18981V0H9.18981V9.18981H0V11.8102H9.18981V21H11.8102V11.8102H21V9.18981H11.8102Z' fill='white'/%3E%3C/svg%3E%0A")
+                center / contain no-repeat;
+            }
         }
     }
 }

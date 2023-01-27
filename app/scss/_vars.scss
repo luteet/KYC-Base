@@ -7,11 +7,12 @@ $containerMin: 1280 + ($containerPadding * 2);
 $containerLarge: 1560 + ($containerPadding * 2);
 
 :root {
-    --title-font: 'Uni Sans';
-    --main-font: 'Roboto';
+    --title-font: 'Uni Sans', sans-serif;
+    --main-font: 'Roboto', sans-serif;
     
     --dark: #252525;
     --dark-2: #313131;
+    --dark-3: #212121;
     --light: #F8F8F8;
 
     --white: #FFF;

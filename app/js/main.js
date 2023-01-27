@@ -466,6 +466,51 @@ body.addEventListener('click', function (event) {
 
   // =-=-=-=-=-=-=-=-=-=- </Бургер в шапке> -=-=-=-=-=-=-=-=-=-=-
 
+
+  // =-=-=-=-=-=-=-=-=-=- <Search result for input> -=-=-=-=-=-=-=-=-=-=-
+  const searchResultLi = $('.search-list li');
+  if(searchResultLi) {
+    const input = searchResultLi.closest('form').querySelector('.search-list-input');
+    input.value = searchResultLi.textContent.trim();
+  }
+  // =-=-=-=-=-=-=-=-=-=- </Search result for input> -=-=-=-=-=-=-=-=-=-=-
+
+
+  const articleTagsCloseBtn = $('.article__tags--close-btn');
+  if(articleTagsCloseBtn) {
+    const element = articleTagsCloseBtn.closest('.article__tags--elem');
+    element.remove()
+  }
+
+  const articleTagsEditBtn = $('.article__tags--edit-btn');
+  if(articleTagsEditBtn) {
+    const element = articleTagsEditBtn.closest('.article__tags--elem'),
+          name = element.querySelector('.article__tags--name');
+
+    name.setAttribute('contentEditable', true);
+    name.focus();
+
+    name.onblur = function () {
+      name.setAttribute('contentEditable', false);
+    }
+  }
+
+  const addTagBtn = $('.add-tag__btn');
+  if(addTagBtn) {
+    const 
+    tag = addTagBtn.closest('.add-tag');
+    list = document.querySelector('#' + tag.dataset.id);
+    
+    list.insertAdjacentHTML('beforeend', `<li class="article__tags--elem">
+    <span class="article__tags--name">
+        ${tag.textContent}
+    </span>
+    <button class="article__tags--close-btn" type="button"></button>
+    <button class="article__tags--edit-btn" type="button"></button>
+</li>`)
+  tag.classList.add('_added');
+  }
+
 })
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <resize> -=-=-=-=-=-=-=-=-=-=-=-=
@@ -551,6 +596,25 @@ let tagCloudBlock = new Swiper('.tag-cloud__block', {
   loopAdditionalSlides: 1,
 })
 
+let asideItem = new Swiper('.graph-popup__item', {
+  slidesPerView: 1,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  grid: {
+    rows: 4,
+    fill: "row",
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+})
+
+
+
+
 function delayAnimation(dataDelay, item) {
   dataDelay = dataDelay.replace('s', '') * 1000;
 
@@ -576,6 +640,17 @@ if(document.querySelector('.decor-letters')) document.querySelector('.decor-lett
 AOS.init({
   disable: 'mobile',
   duration: 1000,
+  once: true,
 });
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </Анимации> -=-=-=-=-=-=-=-=-=-=-=-=
+
+document.querySelectorAll('.custom-date__input').forEach(customDate => {
+  const picker = datepicker(customDate, {
+    formatter: (input, date, instance) => {
+      const value = date.toLocaleDateString()
+      input.value = value // => '1/1/2099'
+    }
+  })
+})
+
