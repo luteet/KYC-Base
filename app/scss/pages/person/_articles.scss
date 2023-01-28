@@ -76,6 +76,7 @@
     &__filter {
 
         display: flex;
+        flex-wrap: wrap;
 
         margin: -10px;
 
@@ -88,22 +89,59 @@
 
         &--item {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            @media (min-width: 600px) {
+                flex-direction: row;
+                align-items: center;
+            }
             flex: 1 1 auto;
 
             padding: 10px;
 
             &:nth-child(1) {
-                flex: 0 1 33%;
+                flex: 1 1 100%;
+                @media (min-width: 1200px) {
+                    flex: 0 1 50%;
+                }
+                @media (min-width: 1700px) {
+                    flex: 0 1 33%;
+                }
             }
             &:nth-child(2) {
-                flex: 0 1 37%;
+                flex: 0 1 100%;
+                @include _768 {
+                    flex: 0 1 60%;
+                }
+                @media (min-width: 1200px) {
+                    flex: 0 1 50%;
+                }
+                @media (min-width: 1700px) {
+                    flex: 0 1 37%;
+                }
             }
             &:nth-child(3) {
-                flex: 0 1 15%;
+                flex: 0 1 50%;
+                @include _768 {
+                    flex: 0 1 40%;
+                }
+                @media (min-width: 1200px) {
+                    flex: 0 1 30%;
+                }
+                @media (min-width: 1700px) {
+                    flex: 0 1 15%;
+                }
             }
             &:nth-child(4) {
-                flex: 0 1 15%;
+                flex: 0 1 50%;
+                @include _768 {
+                    flex: 0 1 40%;
+                }
+                @media (min-width: 1200px) {
+                    flex: 0 1 30%;
+                }
+                @media (min-width: 1700px) {
+                    flex: 0 1 15%;
+                }
             }
         }
 
@@ -128,6 +166,11 @@
 
             display: flex;
             margin: -5px;
+
+            padding-top: 10px;
+            @media (min-width: 600px) {
+                padding-top: 0;
+            }
 
             & > * {
                 flex: 1 1 auto;
@@ -159,7 +202,10 @@
         &--select {
             width: 100%;
             &.select {
-                padding: 15px 19px;
+                padding: 10px 25px 10px 10px;
+                @include _768 {
+                    padding: 15px 19px;
+                }
                 font-size: 1rem;
             }
         }

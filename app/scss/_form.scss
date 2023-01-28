@@ -259,9 +259,15 @@ input[type="search"]::-webkit-search-results-decoration {
         -webkit-appearance: none;
 
         width: 100%; min-height: 100%;
-        padding: 15px 19px;
+        padding: 10px 25px 10px 10px;
+        &._large {
+            padding: 15px 30px 15px 15px;
+        }
         @include _768 {
             padding: 15px 19px;
+            &._large {
+                padding: 25px 24px;
+            }
         }
 
         color: #787878;
