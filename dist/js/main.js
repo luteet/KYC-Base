@@ -604,7 +604,7 @@ let tagCloudBlock = new Swiper('.tag-cloud__block', {
 	loop: true,
 	loopAdditionalSlides: 1,
 
-	on: {
+	/* on: {
 		init: function () {
 			const items = document.querySelectorAll('.tag-cloud__item');
 			let count = 0;
@@ -621,11 +621,9 @@ let tagCloudBlock = new Swiper('.tag-cloud__block', {
 						item.querySelector('.tag-cloud__item--body').textContent = dataArray[Number(item.dataset.index)];
 					},4000)
 				},delay*1000)
-				
-				
 			})
 		}
-	}
+	} */
 })
 
 let asideItem = new Swiper('.graph-popup__item', {
