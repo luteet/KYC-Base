@@ -9,7 +9,7 @@
 
     &__form {
 
-        position: relative;
+        //position: relative;
 
         &--tab {
             margin-top: 50px;
@@ -39,8 +39,8 @@
             padding: 16.5px;
             flex: 1 1 auto;
 
-            position: relative;
-            z-index: 2;
+            //position: relative;
+            //z-index: 2;
 
             @include _768 {
                 flex: 0 1 auto;

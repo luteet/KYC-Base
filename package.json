@@ -9,6 +9,7 @@
   "author": "Shroomark",
   "license": "ISC",
   "devDependencies": {
+    "air-datepicker": "^3.3.5",
     "aos": "^2.3.4",
     "browser-sync": "^2.26.13",
     "del": "^6.0.0",

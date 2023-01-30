@@ -11,7 +11,7 @@ function isHidden(el) {
 	return (el.offsetParent === null)
 }
 
-function scheme(refresh) {
+/* function scheme(refresh) {
 
 	const scheme = document.querySelectorAll('.scheme');
 
@@ -206,7 +206,7 @@ function scheme(refresh) {
 	})
 }
 
-scheme();
+scheme(); */
 
 (function () {
 	var FX = {
@@ -501,13 +501,14 @@ body.addEventListener('click', function (event) {
 			tag = addTagBtn.closest('.add-tag');
 		list = document.querySelector('#' + tag.dataset.id);
 
-		list.insertAdjacentHTML('beforeend', `<li class="article__tags--elem">
-		<span class="article__tags--name">
+		list.insertAdjacentHTML('beforeend', `
+		<li class="article__tags--elem">
+			<span class="article__tags--name">
 				${tag.textContent}
-		</span>
-		<button class="article__tags--close-btn" type="button"></button>
-		<button class="article__tags--edit-btn" type="button"></button>
-</li>`)
+			</span>
+			<button class="article__tags--close-btn" type="button"></button>
+			<button class="article__tags--edit-btn" type="button"></button>
+		</li>`)
 		tag.classList.add('_added');
 	}
 
@@ -536,7 +537,7 @@ function resize() {
 	html.style.setProperty('--height-screen', window.innerHeight + 'px');
 	html.style.setProperty('--width-scrollbar', window.innerWidth - body.offsetWidth + 'px');
 
-	resizeCheckFunc(768,
+	/* resizeCheckFunc(768,
 		function () {  // screen > 992px
 
 			scheme(true);
@@ -546,7 +547,7 @@ function resize() {
 
 			scheme(true);
 
-		});
+		}); */
 
 }
 
@@ -648,8 +649,16 @@ AOS.init({
 document.querySelectorAll('.custom-date__input').forEach(customDate => {
 	const picker = datepicker(customDate, {
 		formatter: (input, date, instance) => {
-			const value = date.toLocaleDateString()
-			input.value = value // => '1/1/2099'
+			const value = date.toLocaleDateString();
+			input.value = value;
+		},
+		onShow: function (event) {
+			const item = event.calendarContainer.closest('.search__form--item');
+			if(item) item.style.zIndex = 2;
+		},
+		onHide: function (event) {
+			const item = event.calendarContainer.closest('.search__form--item');
+			if(item) item.style.removeProperty('z-index')
 		}
 	})
 })
