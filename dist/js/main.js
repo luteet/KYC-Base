@@ -592,15 +592,15 @@ function randomInteger(min, max) {
 
 let tagCloudBlock = new Swiper('.tag-cloud__block', {
 	slidesPerView: 'auto',
-	/* autoplay: {
+	autoplay: {
 		delay: 0,
 		reverseDirection: true,
 		disableOnInteraction: false,
 		pauseOnMouseEnter: true,
-	}, */
+	},
 	speed: 2000,
-	allowSlideNext: false,
-	allowSlidePrev: false,
+	/* allowSlideNext: false,
+	allowSlidePrev: false, */
 	loop: true,
 	loopAdditionalSlides: 1,
 
