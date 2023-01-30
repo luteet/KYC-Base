@@ -17,16 +17,16 @@ function scheme(refresh) {
 
 	scheme.forEach(scheme => {
 
-		if(!isHidden(scheme) && !scheme.classList.contains('_init') || !isHidden(scheme) && refresh == true) {
-	
+		if (!isHidden(scheme) && !scheme.classList.contains('_init') || !isHidden(scheme) && refresh == true) {
+
 			const schemeBody = scheme.querySelector('.scheme-body'),
 				schemeItem = scheme.querySelectorAll('.scheme-item'),
 				schemeMainItem = scheme.querySelector('.scheme-main-item'),
 				schemeLines = scheme.querySelector('.scheme-lines');
-	
+
 			let mainItemPos = schemeMainItem.getBoundingClientRect(),
 				bodyPos = schemeBody.getBoundingClientRect();
-	
+
 			for (let index = 0; index < schemeItem.length; index++) {
 				schemeItem[index].classList.remove('_rendered');
 				schemeItem[index].style.left = 0; schemeItem[index].style.top = 0;
@@ -35,73 +35,73 @@ function scheme(refresh) {
 			for (let index = 0; index < schemeItem.length; index++) {
 
 				let adapt = (window.innerWidth >= 769) ? schemeItem[index].offsetWidth / 5 : 30;
-	
+
 				if (schemeItem[index].dataset.posX == 'left') {
-	
+
 					let renderedBottom = scheme.querySelectorAll('.scheme-item._rendered[data-pos-x="left"][data-pos-y="bottom"]'),
 						renderedCenter = scheme.querySelectorAll('.scheme-item._rendered[data-pos-x="left"][data-pos-y="center"]'),
 						renderedTop = scheme.querySelectorAll('.scheme-item._rendered[data-pos-x="left"][data-pos-y="top"]');
-	
+
 					if (renderedBottom[0] && schemeItem[index].dataset.posY == 'bottom') {
 						let renderedPos = renderedBottom[renderedBottom.length - 1].getBoundingClientRect();
 						schemeItem[index].style.left = renderedPos.x - bodyPos.x - schemeMainItem.offsetWidth - adapt + 'px';
-	
+
 					} else if (renderedCenter[0] && schemeItem[index].dataset.posY == 'center') {
 						let renderedPos = renderedCenter[renderedCenter.length - 1].getBoundingClientRect();
 						schemeItem[index].style.left = renderedPos.x - bodyPos.x - schemeMainItem.offsetWidth - adapt + 'px';
-	
+
 					} else if (renderedTop[0] && schemeItem[index].dataset.posY == 'top') {
 						let renderedPos = renderedTop[renderedTop.length - 1].getBoundingClientRect();
 						schemeItem[index].style.left = renderedPos.x - bodyPos.x - schemeMainItem.offsetWidth - adapt + 'px';
-	
+
 					} else {
 						schemeItem[index].style.left = mainItemPos.x - bodyPos.x - schemeMainItem.offsetWidth - adapt + 'px';
 					}
-	
+
 					schemeItem[index].classList.add('_rendered');
-	
+
 				} else if (schemeItem[index].dataset.posX == 'center') {
 					schemeItem[index].style.left = mainItemPos.x - bodyPos.x + 'px';
-	
+
 				} else if (schemeItem[index].dataset.posX == 'right') {
-	
+
 					let renderedBottom = scheme.querySelectorAll('.scheme-item._rendered[data-pos-x="right"][data-pos-y="bottom"]'),
 						renderedCenter = scheme.querySelectorAll('.scheme-item._rendered[data-pos-x="right"][data-pos-y="center"]'),
 						renderedTop = scheme.querySelectorAll('.scheme-item._rendered[data-pos-x="right"][data-pos-y="top"]');
-	
+
 					if (renderedBottom[0] && schemeItem[index].dataset.posY == 'bottom') {
 						let renderedPos = renderedBottom[renderedBottom.length - 1].getBoundingClientRect();
 						schemeItem[index].style.left = renderedPos.x - bodyPos.x + schemeMainItem.offsetWidth + adapt + 'px';
-	
+
 					} else if (renderedCenter[0] && schemeItem[index].dataset.posY == 'center') {
 						let renderedPos = renderedCenter[renderedCenter.length - 1].getBoundingClientRect();
 						schemeItem[index].style.left = renderedPos.x - bodyPos.x + schemeMainItem.offsetWidth + adapt + 'px';
-	
+
 					} else if (renderedTop[0] && schemeItem[index].dataset.posY == 'top') {
 						let renderedPos = renderedTop[renderedTop.length - 1].getBoundingClientRect();
 						schemeItem[index].style.left = renderedPos.x - bodyPos.x + schemeMainItem.offsetWidth + adapt + 'px';
-	
+
 					} else {
 						schemeItem[index].style.left = mainItemPos.x - bodyPos.x + schemeMainItem.offsetWidth + adapt + 'px';
 					}
-	
+
 					schemeItem[index].classList.add('_rendered');
-	
+
 				}
-	
+
 				if (schemeItem[index].dataset.posY == 'top') {
 					schemeItem[index].style.top = schemeBody.offsetHeight / 2 - schemeItem[index].offsetHeight * 2 - schemeMainItem.offsetHeight + 'px';
-	
+
 				} else if (schemeItem[index].dataset.posY == 'center') {
 					schemeItem[index].style.top = 44 + '%';
-	
+
 				} else if (schemeItem[index].dataset.posY == 'bottom') {
 					schemeItem[index].style.top = schemeMainItem.offsetHeight / 4 + schemeBody.offsetHeight / 2 + 'px';
-	
+
 				}
-	
+
 			}
-	
+
 			function dragLines() {
 				mainItemPos = schemeMainItem.getBoundingClientRect();
 				let icon = schemeMainItem.querySelector('.person__scheme--icon'),
@@ -109,58 +109,58 @@ function scheme(refresh) {
 					yEnd = mainItemPos.y - bodyPos.y + (icon.offsetWidth / 2);
 
 				schemeLines.innerHTML = ''
-	
+
 				for (let index = 0; index < schemeItem.length; index++) {
 					let itemPos = schemeItem[index].getBoundingClientRect(),
 						bodyPos = schemeBody.getBoundingClientRect(),
 						icon = schemeItem[index].querySelector('.person__scheme--icon'),
-	
+
 						x = itemPos.x - bodyPos.x + ((icon.offsetWidth / 2) + 15),
 						y = itemPos.y - bodyPos.y + ((icon.offsetWidth / 2) + 15);
-	
+
 					schemeLines.insertAdjacentHTML('beforeend', `<line x1="${x}" y1="${y}" x2="${xEnd}" y2="${yEnd}" stroke="#212121" stroke-dasharray="5,2.5" stroke-width="1"/>`)
 				}
 			}
-	
+
 			dragLines();
-	
+
 			let pos, lastPosX = 0, lastPosY = 0;
-	
+
 			const mouseDownHandler = function (e) {
 
 				scrollLock.disablePageScroll();
-	
+
 				pos = {
 					startPosX: (e.type == 'mousedown') ? e.clientX : e.changedTouches[0].clientX,
 					startPosY: (e.type == 'mousedown') ? e.clientY : e.changedTouches[0].clientY,
 				};
-	
+
 				if (e.type == 'touchstart') body.classList.add('_active');
-	
+
 				document.addEventListener('mousemove', mouseMoveHandler);
 				document.addEventListener('mouseup', mouseUpHandler);
 				document.addEventListener('touchmove', mouseMoveHandler);
 				document.addEventListener('touchend', mouseUpHandler);
 			};
-	
+
 			const mouseMoveHandler = function (e) {
-				
+
 				let x, y;
-	
+
 				if (e.type == 'mousemove') {
 					x = e.clientX; y = e.clientY;
 				}
 				if (e.type == 'touchmove') {
 					x = e.changedTouches[0].clientX; y = e.changedTouches[0].clientY;
 				}
-				
+
 				if (window.innerWidth >= 769) {
 					schemeBody.style.transform = `translate(calc(-52% + ${lastPosX + x - pos.startPosX}px), calc(-50% + ${lastPosY + y - pos.startPosY}px))`;
 				} else {
 					schemeBody.style.transform = `translate(calc(-47.5% + ${lastPosX + x - pos.startPosX}px), calc(-47.5% + ${lastPosY + y - pos.startPosY}px))`;
 				}
 			};
-	
+
 			scheme.addEventListener('dblclick', function () {
 				if (window.innerWidth >= 769) {
 					schemeBody.style.transform = `translate(calc(-50% + ${0}px), calc(-50% + ${0}px))`;
@@ -168,25 +168,25 @@ function scheme(refresh) {
 					schemeBody.style.transform = `translate(calc(-47.5% + ${0}px), calc(-50% + ${0}px))`;
 				}
 				lastPosX = 0; lastPosY = 0;
-	
+
 			})
-	
+
 			const mouseUpHandler = function (e) {
-	
+
 				let x, y;
-	
+
 				if (e.type == 'mouseup') {
 					x = e.clientX; y = e.clientY;
 				}
 				if (e.type == 'touchend') {
 					x = e.changedTouches[0].clientX; y = e.changedTouches[0].clientY;
 				}
-	
+
 				lastPosX = lastPosX + x - pos.startPosX;
 				lastPosY = lastPosY + y - pos.startPosY;
-	
+
 				if (e.type == 'touchend') body.classList.remove('_active');
-	
+
 				document.removeEventListener('mousemove', mouseMoveHandler);
 				document.removeEventListener('mouseup', mouseUpHandler);
 				document.removeEventListener('touchmove', mouseMoveHandler);
@@ -194,13 +194,13 @@ function scheme(refresh) {
 
 				scrollLock.enablePageScroll();
 			};
-	
+
 			// Attach the handler
 			scheme.addEventListener('mousedown', mouseDownHandler);
 			scheme.addEventListener('touchstart', mouseDownHandler);
 
 			scheme.classList.add('_init');
-	
+
 		}
 
 	})
@@ -469,7 +469,7 @@ body.addEventListener('click', function (event) {
 
 	// =-=-=-=-=-=-=-=-=-=- <Search result for input> -=-=-=-=-=-=-=-=-=-=-
 	const searchResultLi = $('.search-list li');
-	if(searchResultLi) {
+	if (searchResultLi) {
 		const input = searchResultLi.closest('.search-list-wrapper').querySelector('.search-list-input');
 		input.value = searchResultLi.textContent.trim();
 	}
@@ -477,15 +477,15 @@ body.addEventListener('click', function (event) {
 
 
 	const articleTagsCloseBtn = $('.article__tags--close-btn');
-	if(articleTagsCloseBtn) {
+	if (articleTagsCloseBtn) {
 		const element = articleTagsCloseBtn.closest('.article__tags--elem');
 		element.remove()
 	}
 
 	const articleTagsEditBtn = $('.article__tags--edit-btn');
-	if(articleTagsEditBtn) {
+	if (articleTagsEditBtn) {
 		const element = articleTagsEditBtn.closest('.article__tags--elem'),
-					name = element.querySelector('.article__tags--name');
+			name = element.querySelector('.article__tags--name');
 
 		name.setAttribute('contentEditable', true);
 		name.focus();
@@ -496,11 +496,11 @@ body.addEventListener('click', function (event) {
 	}
 
 	const addTagBtn = $('.add-tag__btn');
-	if(addTagBtn) {
-		const 
-		tag = addTagBtn.closest('.add-tag');
+	if (addTagBtn) {
+		const
+			tag = addTagBtn.closest('.add-tag');
 		list = document.querySelector('#' + tag.dataset.id);
-		
+
 		list.insertAdjacentHTML('beforeend', `<li class="article__tags--elem">
 		<span class="article__tags--name">
 				${tag.textContent}
@@ -508,7 +508,7 @@ body.addEventListener('click', function (event) {
 		<button class="article__tags--close-btn" type="button"></button>
 		<button class="article__tags--edit-btn" type="button"></button>
 </li>`)
-	tag.classList.add('_added');
+		tag.classList.add('_added');
 	}
 
 })
@@ -541,12 +541,12 @@ function resize() {
 
 			scheme(true);
 
-	},
-	function () {  // screen < 992px
+		},
+		function () {  // screen < 992px
 
-		scheme(true);
+			scheme(true);
 
-	});
+		});
 
 }
 
@@ -562,25 +562,25 @@ window.onresize = resize;
 
 let articlesSlider = new Swiper('.articles__slider--body', {
 
-		spaceBetween: 15,
-		slidesPerView: 'auto',
-		centeredSlides: false,
+	spaceBetween: 15,
+	slidesPerView: 'auto',
+	centeredSlides: false,
 
-		navigation: {
-				nextEl: '.articles__slider .swiper-button-next',
-				prevEl: '.articles__slider .swiper-button-prev',
+	navigation: {
+		nextEl: '.articles__slider .swiper-button-next',
+		prevEl: '.articles__slider .swiper-button-prev',
+	},
+	/* breakpoints: {
+		992: {
+			slidesPerView: 3,
+			centeredSlides: true,
+
 		},
-		/* breakpoints: {
-			992: {
-				slidesPerView: 3,
-				centeredSlides: true,
-
-			},
-			600: {
-				slidesPerView: 2,
-				centeredSlides: false,
-			},
-		} */
+		600: {
+			slidesPerView: 2,
+			centeredSlides: false,
+		},
+	} */
 });
 
 let tagCloudBlock = new Swiper('.tag-cloud__block', {
@@ -626,10 +626,10 @@ function delayAnimation(dataDelay, item) {
 document.querySelectorAll('.decor-span').forEach(item => {
 	let dataDelay = item.getAttribute('data-decor-delay')
 
-	if(dataDelay) delayAnimation(dataDelay, item)
+	if (dataDelay) delayAnimation(dataDelay, item)
 })
 
-if(document.querySelector('.decor-letters')) document.querySelector('.decor-letters').classList.add('decor-letters_active')
+if (document.querySelector('.decor-letters')) document.querySelector('.decor-letters').classList.add('decor-letters_active')
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -662,33 +662,36 @@ searchListInput.forEach(searchListInput => {
 	let hasElement = false;
 
 	searchListInput.addEventListener('input', function () {
-		const wrapper = searchListInput.closest('.search-list-wrapper'),
-					list = wrapper.querySelector('.search-list'),
-					listElements = list.querySelectorAll('li');
+		
+		setTimeout(() => {
+			const wrapper = searchListInput.closest('.search-list-wrapper'),
+				list = wrapper.querySelector('.search-list'),
+				listElements = list.querySelectorAll('li');
 
-		let listArray = [[],[]];
+			let listArray = [[], []];
 
-		listElements.forEach(listElement => {
-			listArray[0].push(listElement.textContent.trim());
-		})
+			listElements.forEach(listElement => {
+				listArray[0].push(listElement.textContent.trim());
+			})
 
-		listElements.forEach(listElement => {
-			listArray[1].push(listElement);
-		})
+			listElements.forEach(listElement => {
+				listArray[1].push(listElement);
+			})
 
-		hasElement = false;
+			hasElement = false;
 
-		Array.from(listArray[0]).forEach((listArrayElement, index) => {
-			
-			if(listArrayElement.toLowerCase().includes(searchListInput.value.toLowerCase().trim()) && searchListInput.value != '') {
-				listArray[1][index].style.display = 'block';
-				hasElement = true;
-			} else {
-				listArray[1][index].style.removeProperty('display');
-			}
-		})
+			Array.from(listArray[0]).forEach((listArrayElement, index) => {
 
-		if(hasElement && searchListInput.value != '') wrapper.classList.add('_active'); else wrapper.classList.remove('_active')
+				if (listArrayElement.toLowerCase().includes(searchListInput.value.toLowerCase().trim()) && searchListInput.value != '') {
+					listArray[1][index].style.display = 'block';
+					hasElement = true;
+				} else {
+					listArray[1][index].style.removeProperty('display');
+				}
+			})
+
+			if (hasElement && searchListInput.value != '') wrapper.classList.add('_active'); else wrapper.classList.remove('_active')
+		}, 0)
 
 	})
 
