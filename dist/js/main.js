@@ -635,7 +635,7 @@ if (document.querySelector('.decor-letters')) document.querySelector('.decor-let
 
 
 
-// =-=-=-=-=-=-=-=-=-=-=-=- <Анимации> -=-=-=-=-=-=-=-=-=-=-=-=
+// =-=-=-=-=-=-=-=-=-=-=-=- <Animation> -=-=-=-=-=-=-=-=-=-=-=-=
 
 AOS.init({
 	disable: 'mobile',
@@ -643,7 +643,7 @@ AOS.init({
 	once: true,
 });
 
-// =-=-=-=-=-=-=-=-=-=-=-=- </Анимации> -=-=-=-=-=-=-=-=-=-=-=-=
+// =-=-=-=-=-=-=-=-=-=-=-=- </Animation> -=-=-=-=-=-=-=-=-=-=-=-=
 
 document.querySelectorAll('.custom-date__input').forEach(customDate => {
 	const picker = datepicker(customDate, {
@@ -656,13 +656,15 @@ document.querySelectorAll('.custom-date__input').forEach(customDate => {
 
 
 
+// =-=-=-=-=-=-=-=-=-=-=-=- <Search suggestions> -=-=-=-=-=-=-=-=-=-=-=-=
+
 const searchListInput = document.querySelectorAll('.search-list-input');
 searchListInput.forEach(searchListInput => {
 
 	let hasElement = false;
 
 	searchListInput.addEventListener('input', function () {
-		
+
 		setTimeout(() => {
 			const wrapper = searchListInput.closest('.search-list-wrapper'),
 				list = wrapper.querySelector('.search-list'),
@@ -703,3 +705,4 @@ searchListInput.forEach(searchListInput => {
 
 })
 
+// =-=-=-=-=-=-=-=-=-=-=-=- </Search suggestions> -=-=-=-=-=-=-=-=-=-=-=-=
