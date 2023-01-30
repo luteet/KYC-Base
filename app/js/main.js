@@ -603,6 +603,7 @@ let tagCloudBlock = new Swiper('.tag-cloud__block', {
 	allowSlidePrev: false, */
 	loop: true,
 	loopAdditionalSlides: 1,
+	allowTouchMove: false,
 
 	/* on: {
 		init: function () {
