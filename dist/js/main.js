@@ -598,7 +598,7 @@ let tagCloudBlock = new Swiper('.tag-cloud__block', {
 		disableOnInteraction: false,
 		pauseOnMouseEnter: true,
 	},
-	speed: 2000,
+	speed: 3000,
 	/* allowSlideNext: false,
 	allowSlidePrev: false, */
 	loop: true,
