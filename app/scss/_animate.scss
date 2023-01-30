@@ -38,7 +38,10 @@
 }
 
 .decor-span span{
-  transform: translateY(100px);
+  transform: translateY(0px);
+  @media (any-hover) {
+    transform: translateY(100px);
+  }
   display: block;
 }
 .decor-span{
@@ -52,10 +55,14 @@
 
 .decor-letters span{
   display: block;
-  margin-left: -120px;
+  margin-left: 0;
   overflow: hidden;
   transition: all 1s ease-out;
-  opacity: 0;
+  opacity: 1;
+  @media (any-hover) {
+    opacity: 0;
+    margin-left: -120px;
+  }
 }
 .decor-letters.decor-letters_active span{
   margin-left: 0;
