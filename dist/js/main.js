@@ -680,7 +680,7 @@ searchListInput.forEach(searchListInput => {
 
 		Array.from(listArray[0]).forEach((listArrayElement, index) => {
 			
-			if(listArrayElement.toLowerCase().indexOf(searchListInput.value.toLowerCase().trim()) === 0 && searchListInput.value != '') {
+			if(listArrayElement.toLowerCase().includes(searchListInput.value.toLowerCase().trim()) && searchListInput.value != '') {
 				listArray[1][index].style.display = 'block';
 				hasElement = true;
 			} else {
