@@ -7214,6 +7214,12 @@ input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-sea
     }
 }
 
+@media (min-width:800px) {
+    .articles__filter--item-row {
+        flex-wrap: nowrap
+    }
+}
+
 @media (min-width:992px) {
     .section-padding {
         padding: 150px 0

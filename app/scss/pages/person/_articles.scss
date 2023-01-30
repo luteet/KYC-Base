@@ -173,6 +173,10 @@
                 padding-top: 0;
             }
 
+            @media (min-width: 800px) {
+                flex-wrap: nowrap;
+            }
+
             & > * {
                 flex: 1 1 auto;
                 padding: 5px;
