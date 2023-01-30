@@ -66,6 +66,11 @@
             background: var(--light);
             border-radius: 5px;
 
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 175px;
+
             @include _768 {
                 padding: 13px 20px;
             }

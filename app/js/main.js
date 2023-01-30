@@ -613,12 +613,15 @@ let tagCloudBlock = new Swiper('.tag-cloud__block', {
 				const delay = (randomInteger(1,20) * 0.1),
 					  dataArray = item.dataset.text.split(',');
 
-				item.style.setProperty('--delay', (randomInteger(1,20) * 0.1) + 's');
+				item.style.setProperty('--delay', delay + 's');
 				if(count >= 3) count = 0;
-				setInterval(() => {
-					item.dataset.index = Number(item.dataset.index)+1 <= dataArray.length ? Number(item.dataset.index)+1 : 0;
-					item.querySelector('.tag-cloud__item--body').textContent = dataArray[Number(item.dataset.index)];
-				},delay*3000)
+				setTimeout(() => {
+					setInterval(() => {
+						item.dataset.index = Number(item.dataset.index)+1 < dataArray.length-1 ? Number(item.dataset.index)+1 : 0;
+						item.querySelector('.tag-cloud__item--body').textContent = dataArray[Number(item.dataset.index)];
+					},4000)
+				},delay*1000)
+				
 				
 			})
 		}
