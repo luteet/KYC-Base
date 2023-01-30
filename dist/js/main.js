@@ -584,6 +584,12 @@ let articlesSlider = new Swiper('.articles__slider--body', {
 	} */
 });
 
+function randomInteger(min, max) {
+	// получить случайное число от (min-0.5) до (max+0.5)
+	let rand = min - 0.5 + Math.random() * (max - min + 1);
+	return Math.round(rand);
+}
+
 let tagCloudBlock = new Swiper('.tag-cloud__block', {
 	slidesPerView: 'auto',
 	autoplay: {
@@ -595,6 +601,18 @@ let tagCloudBlock = new Swiper('.tag-cloud__block', {
 	speed: 2000,
 	loop: true,
 	loopAdditionalSlides: 1,
+
+	on: {
+		init: function () {
+			const items = document.querySelectorAll('.tag-cloud__item');
+			let count = 0;
+			items.forEach(item => {
+				count++
+				item.style.setProperty('--delay', (randomInteger(1,20) * 0.1) + 's');
+				if(count >= 3) count = 0;
+			})
+		}
+	}
 })
 
 let asideItem = new Swiper('.graph-popup__item', {

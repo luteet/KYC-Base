@@ -1,3 +1,15 @@
+@keyframes infiniteOpacity {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 .tag-cloud {
 
     // .tag-cloud__container
@@ -43,6 +55,9 @@
             font-size: 1.125rem;
             padding: 8px;
         }
+
+        opacity: 0;
+        animation: infiniteOpacity 3s ease var(--delay) infinite normal forwards;
 
         // .tag-cloud__item--body
 
