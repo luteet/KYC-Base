@@ -516,7 +516,7 @@ body.addEventListener('click', function (event) {
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <resize> -=-=-=-=-=-=-=-=-=-=-=-=
 
-let resizeCheck = {}, windowSize;
+let resizeCheck = {}, windowSize, speed;
 
 function resizeCheckFunc(size, minWidth, maxWidth) {
 	if (windowSize <= size && (resizeCheck[String(size)] == true || resizeCheck[String(size)] == undefined) && resizeCheck[String(size)] != false) {
@@ -537,17 +537,17 @@ function resize() {
 	html.style.setProperty('--height-screen', window.innerHeight + 'px');
 	html.style.setProperty('--width-scrollbar', window.innerWidth - body.offsetWidth + 'px');
 
-	/* resizeCheckFunc(768,
+	resizeCheckFunc(768,
 		function () {  // screen > 992px
 
-			scheme(true);
+			speed = 1700;
 
 		},
 		function () {  // screen < 992px
 
-			scheme(true);
+			speed = 500;
 
-		}); */
+		});
 
 }
 
@@ -590,42 +590,47 @@ function randomInteger(min, max) {
 	return Math.round(rand);
 }
 
-let tagCloudBlock = new Swiper('.tag-cloud__block', {
-	slidesPerView: 'auto',
-	autoplay: {
-		delay: 0,
-		reverseDirection: true,
-		disableOnInteraction: false,
-		pauseOnMouseEnter: true,
-	},
-	speed: 3000,
-	/* allowSlideNext: false,
-	allowSlidePrev: false, */
-	loop: true,
-	loopAdditionalSlides: 1,
-	allowTouchMove: false,
-
-	/* on: {
-		init: function () {
-			const items = document.querySelectorAll('.tag-cloud__item');
-			let count = 0;
-			items.forEach(item => {
-				count++
-				const delay = (randomInteger(1,20) * 0.1),
-					  dataArray = item.dataset.text.split(',');
-
-				item.style.setProperty('--delay', delay + 's');
-				if(count >= 3) count = 0;
-				setTimeout(() => {
-					setInterval(() => {
-						item.dataset.index = Number(item.dataset.index)+1 < dataArray.length-1 ? Number(item.dataset.index)+1 : 0;
-						item.querySelector('.tag-cloud__item--body').textContent = dataArray[Number(item.dataset.index)];
-					},4000)
-				},delay*1000)
-			})
-		}
-	} */
-})
+let tagCloudBlockSlidesLength = document.querySelectorAll('.tag-cloud__item');
+let tagCloudBlock;
+setTimeout(() => {
+	tagCloudBlock = new Swiper('.tag-cloud__block', {
+		slidesPerView: 'auto',
+		slidesPerGroupAuto: true,
+		autoplay: {
+			delay: 0,
+			reverseDirection: true,
+			disableOnInteraction: false,
+			//pauseOnMouseEnter: true,
+		},
+		speed: tagCloudBlockSlidesLength.length * speed,
+		/* allowSlideNext: false,
+		allowSlidePrev: false, */
+		loop: true,
+		loopAdditionalSlides: 1,
+		allowTouchMove: false,
+	
+		/* on: {
+			init: function () {
+				const items = document.querySelectorAll('.tag-cloud__item');
+				let count = 0;
+				items.forEach(item => {
+					count++
+					const delay = (randomInteger(1,20) * 0.1),
+						  dataArray = item.dataset.text.split(',');
+	
+					item.style.setProperty('--delay', delay + 's');
+					if(count >= 3) count = 0;
+					setTimeout(() => {
+						setInterval(() => {
+							item.dataset.index = Number(item.dataset.index)+1 < dataArray.length-1 ? Number(item.dataset.index)+1 : 0;
+							item.querySelector('.tag-cloud__item--body').textContent = dataArray[Number(item.dataset.index)];
+						},4000)
+					},delay*1000)
+				})
+			}
+		} */
+	})
+}, 200);
 
 let asideItem = new Swiper('.graph-popup__item', {
 	slidesPerView: 1,

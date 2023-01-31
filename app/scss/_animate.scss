@@ -7,6 +7,7 @@
 }
 .decor-text{
   z-index: 0;
+  width: 100%;
 }
 .database__text{
   width: fit-content;
@@ -70,4 +71,8 @@
 }
 .decor-letters{
   display: flex;
+  
+  &._right {
+    justify-content: flex-end;
+  }
 }
