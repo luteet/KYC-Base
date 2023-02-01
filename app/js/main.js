@@ -760,16 +760,23 @@ searchListInput.forEach(searchListInput => {
 // =-=-=-=-=-=-=-=-=-=-=-=- </Search suggestions> -=-=-=-=-=-=-=-=-=-=-=-=
 
 const preloaderElement = document.querySelector('.preloader-element');
-preloaderElement.style.opacity = 1;
-/* preloaderElement.addEventListener('load', function () {
-	//preloaderElement.play();
-	preloaderElement.style.opacity = 1;
-}) */
+//preloaderElement.style.opacity = 1;
+let pageLoadedCheck = false, preloaderCheck = false;
+preloaderElement.addEventListener('ready', function () {
+	
+	preloaderElement.play();
+	setTimeout(() => {
+		preloaderElement.style.opacity = 1;
+	},200)
+})
 
 window.addEventListener('load', function () {
+
+	
 	
 	setTimeout(() => {
 		body.classList.add('_loaded')
+
 		// =-=-=-=-=-=-=-=-=-=-=-=- <Animation> -=-=-=-=-=-=-=-=-=-=-=-=
 
 		AOS.init({
@@ -779,6 +786,6 @@ window.addEventListener('load', function () {
 		});
 
 		// =-=-=-=-=-=-=-=-=-=-=-=- </Animation> -=-=-=-=-=-=-=-=-=-=-=-=
-	}, 1000);
+	}, 2500);
 
 })

@@ -2422,7 +2422,7 @@ section:first-child {
     left: 0;
     top: 0;
     width: 100vw;
-    height: 100vh;
+    height: var(--height-screen);
     background: var(--dark-3);
     opacity: 1;
     visibility: visible;
