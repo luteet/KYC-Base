@@ -42,7 +42,7 @@
 								<!-- NEW -->
 							</div>
 							<div class="header__nav--block">
-								<form action="#" class="header__nav--verify header__verify">
+								<form action="#" class="header__nav--verify header__verify" style="--delay: 0s;">
 									<h3 class="header__verify--title">
 										Search
 									</h3>
@@ -55,7 +55,7 @@
 										</button>
 									</div>
 								</form>
-								<ul class="header__nav--list">
+								<ul class="header__nav--list" style="--delay: 0.2s;">
 									<li class="header__nav--item" style="animation-delay: 0.5s;">
 										<a href="#" class="header__nav--link" data-number="00" data-text="Home">
 											Home
@@ -1168,9 +1168,63 @@
             </div>
         </div>
     </div>
+    <div class="add-popup popup" id="company-popup" style="display: none;">
+        <div class="add-popup__wrapper popup-wrapper">
+            <div class="add-popup__bg popup-bg popup-close"></div>
+            <div class="add-popup__body popup-body">
+                <button type="button" class="add-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.971 47.971">
+                        <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"/>
+                    </svg>
+                </button>
+                <div class="add-popup__scroll-section popup-scroll-section">
+                    <form action="#" class="add-popup__form">
+                        <h2 class="add-popup__title">
+                            Add form
+                        </h2>
+                        <label class="add-popup__label">
+                            <input type="text" name="surname" required class="add-popup__input" placeholder="Surname">
+                        </label>
+                        <label class="add-popup__label">
+                            <input type="text" name="name" class="add-popup__input" placeholder="Name">
+                        </label>
+                        <label class="add-popup__label">
+                            <input type="text" name="date-birth" class="add-popup__input" placeholder="Date of Birth">
+                        </label>
+                        <label class="add-popup__label">
+                            <input type="text" name="city-birth" class="add-popup__input" placeholder="City of birth">
+                        </label>
+                        <label class="add-popup__label">
+                            <input type="text" name="country-business" class="add-popup__input" placeholder="Country of business">
+                        </label>
+                        <label class="add-popup__label">
+                            <input type="text" name="city-business" class="add-popup__input" placeholder="City of business">
+                        </label>
+                        <label class="add-popup__label">
+                            <input type="text" name="close-people-1" class="add-popup__input clone-input" placeholder="City of business">
+                            <button class="add-popup__clone-btn clone-btn" type="button" title="Add input"></button>
+                        </label>
+                        <label class="add-popup__label">
+                            <input type="text" name="companies-1" class="add-popup__input clone-input" placeholder="Companies that may be related to you">
+                            <button class="add-popup__clone-btn clone-btn" type="button" title="Add input"></button>
+                        </label>
+                        <button class="add-popup__submit btn" type="submit">
+                            Save
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <div class="preloader">
+        <lottie-player src="https://lottie.host/840afe89-07f1-4860-ba63-d2e583f312ec/MpVsjR5DrH.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;" autoplay  loop class="preloader-element"></lottie-player>
+    </div>
 
     <script src="js/libs.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>

@@ -12,10 +12,17 @@ body {
 
     display: flex;
     flex-direction: column;
+
+    overflow: hidden;
+    background: var(--dark-3);
     
+    &._loaded {
+        overflow: visible;
+        background: transparent;
+    }
 
     &._active, &._popup-active {
-        overflow: hidden;
+        overflow: hidden !important;
         & .wrapper {
             margin-right: var(--width-scrollbar);
         }
@@ -43,6 +50,8 @@ body {
 
     padding-bottom: 50px;
 
+    opacity: 0;
+
     flex: 1 0 auto;
 
     display: flex;
@@ -64,6 +73,10 @@ body {
         }
         z-index: -1;
     }
+}
+
+body._loaded .wrapper {
+    opacity: 1;
 }
 
 .main {
@@ -269,4 +282,30 @@ section {
     filter: blur(5px);
     opacity: .15;
     pointer-events: none;
+}
+
+.preloader {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+
+    background: var(--dark-3);
+
+    opacity: 1; visibility: visible;
+    transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader-element {
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+body._loaded .preloader {
+    opacity: 0; visibility: hidden;
 }

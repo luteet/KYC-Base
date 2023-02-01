@@ -512,6 +512,21 @@ body.addEventListener('click', function (event) {
 		tag.classList.add('_added');
 	}
 
+	const cloneBtn = $('.clone-btn');
+	if (cloneBtn) {
+		const label = cloneBtn.closest('label'),
+			  input = label.querySelector('.clone-input'),
+			  labelCloned = label.cloneNode(true),
+			  form = label.closest('form'),
+			  inputCloned = labelCloned.querySelector('.clone-input');
+
+		labelCloned.querySelector('.clone-btn').remove();
+		input.dataset.index = (Number(input.dataset.index)) ? Number(input.dataset.index) + 1 : 1;
+		inputCloned.setAttribute('name', inputCloned.name.slice(0, -1) + (Number(input.dataset.index) + 1));
+		const lastLabel = document.querySelector(`[name="${inputCloned.name.slice(0, -1)}${input.dataset.index}"]`).closest('label');
+		form.insertBefore(labelCloned, lastLabel.nextSibling);
+	}
+
 })
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <resize> -=-=-=-=-=-=-=-=-=-=-=-=
@@ -535,6 +550,7 @@ function resize() {
 	windowSize = window.innerWidth
 
 	html.style.setProperty('--height-screen', window.innerHeight + 'px');
+	html.style.setProperty('--height-header', header.offsetHeight + 'px');
 	html.style.setProperty('--width-scrollbar', window.innerWidth - body.offsetWidth + 'px');
 
 	resizeCheckFunc(768,
@@ -671,15 +687,7 @@ if (document.querySelector('.decor-letters')) document.querySelector('.decor-let
 
 
 
-// =-=-=-=-=-=-=-=-=-=-=-=- <Animation> -=-=-=-=-=-=-=-=-=-=-=-=
 
-AOS.init({
-	disable: 'mobile',
-	duration: 1000,
-	once: true,
-});
-
-// =-=-=-=-=-=-=-=-=-=-=-=- </Animation> -=-=-=-=-=-=-=-=-=-=-=-=
 
 document.querySelectorAll('.custom-date__input').forEach(customDate => {
 	const picker = datepicker(customDate, {
@@ -750,3 +758,27 @@ searchListInput.forEach(searchListInput => {
 })
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </Search suggestions> -=-=-=-=-=-=-=-=-=-=-=-=
+
+const preloaderElement = document.querySelector('.preloader-element');
+preloaderElement.style.opacity = 1;
+/* preloaderElement.addEventListener('load', function () {
+	//preloaderElement.play();
+	preloaderElement.style.opacity = 1;
+}) */
+
+window.addEventListener('load', function () {
+	
+	setTimeout(() => {
+		body.classList.add('_loaded')
+		// =-=-=-=-=-=-=-=-=-=-=-=- <Animation> -=-=-=-=-=-=-=-=-=-=-=-=
+
+		AOS.init({
+			disable: 'mobile',
+			duration: 1000,
+			once: true,
+		});
+
+		// =-=-=-=-=-=-=-=-=-=-=-=- </Animation> -=-=-=-=-=-=-=-=-=-=-=-=
+	}, 1000);
+
+})

@@ -615,3 +615,139 @@
         font-family: var(--title-font);
     }
 }
+
+.add-popup {
+
+    // .add-popup__wrapper
+
+    &__wrapper {
+    }
+
+    // .add-popup__bg
+
+    &__bg {
+    }
+
+    // .add-popup__body
+
+    &__body {
+        padding: 75px 0px 30px 0px;
+        @include _992 {
+            padding: 141px 25px 70px 25px;
+        }
+    }
+
+    // .add-popup__close-btn
+
+    &__close-btn {
+    }
+
+    // .add-popup__scroll-section
+
+    &__scroll-section {
+    }
+
+    // .add-popup__form
+
+    &__form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        padding: 0 15px;
+    }
+
+    // .add-popup__title
+
+    &__title {
+        padding-bottom: 11px;
+
+        font-weight: 600;
+        font-size: 1.875rem;
+        line-height: 93%;
+        text-align: center;
+
+        color: #1D1D1D;
+    }
+
+    // .add-popup__label
+
+    &__label {
+        margin-top: 20px;
+
+        max-width: 705px;
+        width: 100%;
+
+        position: relative;
+        
+        display: flex;
+        align-items: center;
+
+        background: #F0F0F0;
+        border: 1px solid #C9C9C9;
+        border-radius: 8px;
+    }
+
+    // .add-popup__input
+
+    &__input {
+        padding: 25px 30px;
+        border-radius: 8px;
+
+        width: 100%;
+
+        background: transparent;
+
+        font-size: 1rem;
+        @include _992 {
+            font-size: 1.125rem;
+        }
+        line-height: 116.666667%;
+
+        color: #787878;
+
+        &::placeholder {
+            opacity: 1;
+            color: #787878;
+
+            transition: opacity .2s ease-in-out;
+        }
+
+        transition: color .2s ease-in-out;
+        &:focus {
+            color: var(--dark);
+            &::placeholder {
+                opacity: 0;
+            }
+        }
+
+    }
+
+    // .add-popup__clone-btn
+
+    &__clone-btn {
+        display: block;
+        width: 54px; height: 54px;
+        margin: 8px;
+
+        background: #2E2E2E url("data:image/svg+xml,%3Csvg viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.9499 9.45H11.5501V1.04994C11.5501 0.470462 11.0796 0 10.4999 0C9.92046 0 9.45 0.470462 9.45 1.04994V9.45H1.04994C0.470462 9.45 0 9.92046 0 10.4999C0 11.0796 0.470462 11.5501 1.04994 11.5501H9.45V19.9499C9.45 20.5296 9.92046 21.0001 10.4999 21.0001C11.0796 21.0001 11.5501 20.5296 11.5501 19.9499V11.5501H19.9499C20.5296 11.5501 21.0001 11.0796 21.0001 10.4999C21.0001 9.92046 20.5296 9.45 19.9499 9.45Z' fill='white'/%3E%3C/svg%3E%0A")
+        center / 50% no-repeat;
+        border: 2px solid #2E2E2E;
+        border-radius: 2px;
+
+        transition: background-color .2s ease-in-out;
+        &:hover {
+            background-color: #3b3b3b;
+        }
+        
+        &:active {
+            background-color: #1b1b1b;
+        }
+    }
+
+    // .add-popup__submit
+
+    &__submit {
+        margin-top: 29px;
+    }
+}
